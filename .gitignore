@@ -1,0 +1,9 @@
+.dev/*
+.conf/*
+.bin
+.media/*
+*.pyc 
+env/
+ssms/migrations/
+users/migrations/
+media/

@@ -1,0 +1,117 @@
+{% extends "_layouts/base.html" %}
+{% load thumbnail %}
+{% block page_title %}Your Site - Home{% endblock %}
+{% block page_class %}home-page{% endblock %}
+{% block content %}
+<section id="sp-page-title">
+            <div class="row">
+               <div id="sp-title" class="col-sm-12 col-md-12">
+                  <div class="sp-column ">
+                     <div class="sp-page-title" style="background-image: url(/static/assets/images/demo/subheader.png);">
+                        <div class="container">
+                           <h2>Sport And Events</h2>
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <br>
+         <br>
+         <section id="sp-main-body">
+            <div class="container">
+               <div class="row">
+                  <div id="sp-component" class="col-sm-12 col-md-12">
+                     <div class="sp-column ">
+                        <div id="system-message-container"></div>
+                        <div id="akeeba-renderjoomla">
+                           <div id="com-spkgarten" class="spkgarten spkgarten-view-events">
+                              <div id="sp-classes" class="sp-classes">
+                                 <div class="spkgarten-row">
+                                   
+                                    <div class="sp-kidzy-event spkgarten-col-sm-12">
+                                       <h2>{{ sport.title }}</h2>
+                                       {% if sport.sports_images.all.count > 1 %}
+                                        <div class="owl-carousel owl-theme slider1">
+                                          {% for img in sport.sports_images.all %}
+                                          <img src="{{ img.image.url }}" style="width: 100% !important;">
+                                          <div class="product-content"> 
+                                            <div class="product-image">
+                                               {% thumbnail img.image "1040x730" crop="center" as im %}
+                      <img src="{{ im.url }}">
+                      {% endthumbnail %}
+                                            </div>
+                                          </div>
+                                          {% endfor %}
+             </div>
+             {% else %}
+             {% for img in sport.sports_images.all %}
+             {% thumbnail img.image "1040x730" crop="center" as im %}
+                      <img src="{{ im.url }}">
+                      {% endthumbnail %}
+             {% endfor %}
+             {% endif %}
+                                       </div>
+                                       <div class="event-description">
+                                          <div class="details">
+                                             <p>{{ sport.comments|linebreaks }}</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                   
+                                   
+                                 </div>
+                                 
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            </div>
+      </section>
+
+
+{% endblock %}
+
+{% block cusjs %}
+     <script>
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      autoplay:false,
+      responsive:{
+        0:{
+            margin: 0,
+            items:1,
+            center: true
+        },
+        360:{
+            margin: 10,
+            items:1,
+          
+        },
+        480:{
+            items:1
+        },
+        640:{
+            items:1
+        },
+        768:{
+            items:1
+        },
+        1000:{
+            items:1
+        },
+        1200:{
+            items:1,
+            margin:20
+        }
+      }
+    });
+  </script>
+  {% endblock cusjs %}

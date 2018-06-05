@@ -1,0 +1,1 @@
+jQuery(function($){$('.subject-list.panel-group li').click(function(){$('li.active').removeClass('active');$(this).addClass('active');});});

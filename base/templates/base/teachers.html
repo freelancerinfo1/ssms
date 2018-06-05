@@ -1,0 +1,249 @@
+{% extends "_layouts/base.html" %}
+
+
+
+{% block page_title %}Your Site - Home{% endblock %}
+{% block page_class %}home-page{% endblock %}
+{% block content %}
+<section id="sp-page-title">
+         <div class="row">
+            <div id="sp-title" class="col-sm-12 col-md-12">
+               <div class="sp-column ">
+                  <div class="sp-page-title" style="background-image: url(/static/assets/images/demo/subheader.png);">
+                     <div class="container">
+                        <h2>Teachers</h2>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="sp-main-body">
+         <div class="container">
+            <div class="row">
+               <div id="sp-component" class="col-sm-12 col-md-12">
+                  <div class="sp-column ">
+                     <div id="system-message-container"></div>
+                     <div id="akeeba-renderjoomla">
+                        <div id="spkgarten" class="spkgarten view-spkgarten-techers spkgarten-teachers-list">
+                           <div class="sp-section-title">
+                              <h2 class="title">Meet Our Staffs</h2>
+                              <p class="subtitle">Best Skilled Teachers</p>
+                           </div>
+                           <div class="spkgarten-row">
+                              {% for tec in teachers %}
+                              <div class="spkgarten-person spkgarten-col-sm-3 spkgarten-col-md-3">
+                                 <div class="spkgarten-person-details">
+                                    <div class="spkgarten-person-img">
+                                       <img src="{{ tec.image.url }}" class="spkgarten-person-img spkgarten-img-responsive" alt="{{ tec.name }}">
+                                       <ul class="spkgarten-person-social">
+                                          <li>
+                                             <a href="http://facebook.com/#" target="_blank" class="facebook">
+                                             <i class="fa fa-facebook"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://linkedin.com/#" target="_blank" class="linkedin">
+                                             <i class="fa fa-linkedin"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://twitter.com/#" target="_blank" class="twitter">
+                                             <i class="fa fa-twitter"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="https://plus.google.com/#" target="_blank" class="gplus">
+                                             <i class="fa fa-google-plus"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="#" target="_blank" class="website">
+                                             <i class="fa fa-globe"></i>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div class="spkgarten-person-info">
+                                       <a class="spkgarten-person-title" href="teachers/2-rhoda-byrd.html">
+                                       {{ tec.name }}</a>
+                                    </div>
+                                    <p class="spkgarten-person-designation">
+                                       {{ tec.position }} 
+                                    </p>
+                                 </div>
+                              </div>
+                              {% endfor %}
+                              
+                              </div>
+                           </div>
+                           <!-- <div class="spkgarten-row">
+                              <div class="spkgarten-person spkgarten-col-sm-3 spkgarten-col-md-3">
+                                 <div class="spkgarten-person-details">
+                                    <div class="spkgarten-person-img">
+                                       <img src="/static/assets/images/demo/teachers/teacher06.jpg" class="spkgarten-person-img spkgarten-img-responsive" alt="Fernando Vicente">
+                                       <ul class="spkgarten-person-social">
+                                          <li>
+                                             <a href="http://facebook.com/#" target="_blank" class="facebook">
+                                             <i class="fa fa-facebook"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://linkedin.com/#" target="_blank" class="linkedin">
+                                             <i class="fa fa-linkedin"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://twitter.com/#" target="_blank" class="twitter">
+                                             <i class="fa fa-twitter"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="https://plus.google.com/#" target="_blank" class="gplus">
+                                             <i class="fa fa-google-plus"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://www.joomshaper.com/" target="_blank" class="website">
+                                             <i class="fa fa-globe"></i>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div class="spkgarten-person-info">
+                                       <a class="spkgarten-person-title" href="teachers/6-fernando-vicente.html">
+                                       Fernando Vicente </a>
+                                    </div>
+                                    <p class="spkgarten-person-designation">
+                                       Assistant Teacher 
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="spkgarten-person spkgarten-col-sm-3 spkgarten-col-md-3">
+                                 <div class="spkgarten-person-details">
+                                    <div class="spkgarten-person-img">
+                                       <img src="/static/assets/images/demo/teachers/teacher07.jpg" class="spkgarten-person-img spkgarten-img-responsive" alt="Nick Liefhebber">
+                                       <ul class="spkgarten-person-social">
+                                          <li>
+                                             <a href="http://facebook.com/#" target="_blank" class="facebook">
+                                             <i class="fa fa-facebook"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://linkedin.com/#" target="_blank" class="linkedin">
+                                             <i class="fa fa-linkedin"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://twitter.com/#" target="_blank" class="twitter">
+                                             <i class="fa fa-twitter"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="https://plus.google.com/#" target="_blank" class="gplus">
+                                             <i class="fa fa-google-plus"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://www.joomshaper.com/" target="_blank" class="website">
+                                             <i class="fa fa-globe"></i>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div class="spkgarten-person-info">
+                                       <a class="spkgarten-person-title" href="teachers/7-nick-liefhebber.html">
+                                       Nick Liefhebber </a>
+                                    </div>
+                                    <p class="spkgarten-person-designation">
+                                       Assistant Teacher 
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="spkgarten-person spkgarten-col-sm-3 spkgarten-col-md-3">
+                                 <div class="spkgarten-person-details">
+                                    <div class="spkgarten-person-img">
+                                       <img src="/static/assets/images/demo/teachers/teacher08.jpg" class="spkgarten-person-img spkgarten-img-responsive" alt="Antonio Sortino">
+                                       <ul class="spkgarten-person-social">
+                                          <li>
+                                             <a href="http://facebook.com/#" target="_blank" class="facebook">
+                                             <i class="fa fa-facebook"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://linkedin.com/#" target="_blank" class="linkedin">
+                                             <i class="fa fa-linkedin"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://twitter.com/#" target="_blank" class="twitter">
+                                             <i class="fa fa-twitter"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="https://plus.google.com/#" target="_blank" class="gplus">
+                                             <i class="fa fa-google-plus"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://www.joomshaper.com/" target="_blank" class="website">
+                                             <i class="fa fa-globe"></i>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div class="spkgarten-person-info">
+                                       <a class="spkgarten-person-title" href="teachers/8-antonio-sortino.html">
+                                       Antonio Sortino </a>
+                                    </div>
+                                    <p class="spkgarten-person-designation">
+                                       Assistant Teacher 
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="spkgarten-person spkgarten-col-sm-3 spkgarten-col-md-3">
+                                 <div class="spkgarten-person-details">
+                                    <div class="spkgarten-person-img">
+                                       <img src="/static/assets/images/demo/teachers/teacher01.jpg" class="spkgarten-person-img spkgarten-img-responsive" alt="Mike Campau">
+                                       <ul class="spkgarten-person-social">
+                                          <li>
+                                             <a href="http://facebook.com/#" target="_blank" class="facebook">
+                                             <i class="fa fa-facebook"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="http://twitter.com/#" target="_blank" class="twitter">
+                                             <i class="fa fa-twitter"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="https://plus.google.com/#" target="_blank" class="gplus">
+                                             <i class="fa fa-google-plus"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="../../../www.joomshaper.html" target="_blank" class="website">
+                                             <i class="fa fa-globe"></i>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div class="spkgarten-person-info">
+                                       <a class="spkgarten-person-title" href="teachers/9-mike-campau-1.html">
+                                       Mike Campau </a>
+                                    </div>
+                                    <p class="spkgarten-person-designation">
+                                       Assistant Teacher 
+                                    </p>
+                                 </div>
+                              </div>
+                           </div> -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+{% endblock %}

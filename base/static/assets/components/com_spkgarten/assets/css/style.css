@@ -1,0 +1,951 @@
+/* mixed
+========================================================================== */
+body{
+  text-rendering: optimizeLegibility !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/*.sp-section-title*/
+.sp-section-title{
+  text-align: center;
+  margin-bottom: 90px;
+}
+.sp-section-title .title{
+  color: #92278f;
+  font-size: 36px;
+}
+.sp-section-title .subtitle{
+  font-size: 24px;
+  color: #c7c7c7;
+}
+
+/*.sp-overlay*/
+.sp-overlay {
+  background: rgba(146,39,143,.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(-10deg) scale(.8);
+  transform: rotate(-10deg) scale(.8);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.sp-overlay .icon{
+  color: #fff;
+  font-size: 75px;
+  position: absolute;
+  top: 50%;  
+  left: 50%;  
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.sp-overlay .icon:hover{
+  opacity: .6;
+}
+.sp-kidzy-course .course-img,
+.sp-kidzy-event .events-img{
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.sp-kidzy-event .events-img img{
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.sp-kidzy-course:hover .course-img img,
+.sp-kidzy-event:hover .events-img img{
+  -webkit-transform: scale(1.07) rotate(2deg);
+  transform: scale(1.07) rotate(2deg);
+}
+.sp-kidzy-course:hover .sp-overlay,
+.sp-kidzy-event:hover .sp-overlay {
+  opacity: 1;
+  -webkit-transform: translate(0, 0) rotate(0deg) scale(1);
+  transform: translate(0, 0) rotate(0deg) scale(1);
+}
+.sp-kidzy-course:hover .icon,
+.sp-kidzy-event:hover .icon{
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+/* sp-kidzy-course-filter
+========================================================================== */
+#sp-courses-filter {
+  background-color: #f2f5f9;
+  border-bottom: 5px solid #eaecf1;
+  border-radius: 3px;
+  margin-bottom: 40px;
+}
+ul.courses-list {
+  padding: 0 0 0 30px;
+  margin: 0;
+  font-size: 18px;
+}
+ul.courses-list>li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 40px;
+}
+ul.courses-list>li:last-child {
+  margin-right: 0;
+}
+ul.courses-list>li>a {
+  color: #737373;
+  line-height: 60px;
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+ul.courses-list>li>a:hover{
+  color: #92278f;
+}
+.kidzy-search-form .input-wrapper {
+  background-color: #edf1f5;
+  padding: 0 25px 0 0;
+  line-height: 60px;
+}
+.kidzy-search-form input[type="text"]{
+  float: left;
+  min-width: 330px;
+  border: none;
+  background-color: transparent !important;
+  line-height: 60px;
+  height: 60px !important;
+  font-size: 18px;
+}
+.kidzy-search-form input[type="text"]:-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+.kidzy-search-form input[type="text"]:-moz-placeholder {
+  color: #cbcbcb;
+}
+.kidzy-search-form input[type="text"]:placeholder {
+  color: #cbcbcb;
+}
+.kidzy-search-form i.fa{
+  color: #92278f;
+  font-size: 20px;
+}
+
+/* sp-kidzy-courses
+========================================================================== */
+.view-courses .view-courses-bottom-content .bottom-content{
+  display: block;
+  padding: 75px 0 110px 0;
+  background-image: url(../img/home-school-facilities-bg.jpg);
+}
+.view-course .view-courses-bottom-content{
+  display: none;
+}
+.sp-kidzy-course{
+  margin-bottom: 35px;
+}
+.sp-kidzy-course .course-description{
+  overflow: hidden;
+  text-align: center;
+  background: #f2f5f9;
+  box-shadow: 0 6px #eaecf1;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 30px 20px;
+}
+.sp-kidzy-course .course-name{
+  color: #92278f;
+  margin: 0;
+  text-transform: capitalize;
+}
+.sp-kidzy-course .course-name a{
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.sp-kidzy-course .course-name a:hover{
+  opacity: .6;
+}
+.sp-kidzy-course .admission-availability{
+  font-size: 14px;
+  color: #727375;
+  margin: 10px 0 0;
+}
+.sp-kidzy-course .course-img img{
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  width: 100%;
+}
+
+ul.course-info{
+	margin: 0;
+}
+
+.sp-kidzy-course ul.course-info {
+  padding: 0;
+  margin-top: 37px;
+}
+.sp-kidzy-course ul.course-info>li {
+  list-style: none;
+  display: inline-block;
+  border-left: 1px solid #dcdfe3;
+  padding: 0 10px;
+}
+.sp-kidzy-course ul.course-info>li:last-child {
+  padding-right: 0;
+}
+.sp-kidzy-course ul.course-info>li:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+.sp-kidzy-course ul.course-info>li{
+  color: #92278f;
+  font-size: 18px;
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+}
+.sp-kidzy-course ul.course-info>li span{
+  display: block;
+  color: #727375;
+  font-size: 14px;
+} 
+/*kidzy-school-fecilities*/
+.kidzy-school-fecilities.sp-kidzy-features{
+  background-image: url(../img/home-school-facilities-bg.jpg);
+  padding: 75px 0 110px 0;
+}
+.kidzy-school-fecilities .sp-kidzy-feature{
+  text-align: center;
+}
+.kidzy-school-fecilities .sp-kidzy-feature i.kd{
+  font-size: 48px;
+}
+.spkgarten-related-courses{
+  margin-top: 50px;
+}
+
+/* sp-kidzy-course-details
+========================================================================== */
+.view-course #sp-main-body >.container{
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.course-information-wrapper{
+  margin-left: 20px;
+}
+.course-information {
+    margin-bottom: 30px;
+}
+.course-information .title {
+    color: #92278f;
+    font-size: 28px;
+}
+.course-information .subtitle {
+    color: #727375;
+    font-size: 20px;
+    margin: 15px 0 25px;
+}
+.course-information p {
+    color: #818283;
+    line-height: 24px;
+}
+.course-meta-data{
+  
+}
+.course-single-meta {
+    border-right: 1px solid #dcdfe3;
+    padding-right: 40px;
+    margin-right: 30px;
+    display: inline-block;
+}
+.course-single-meta:last-child{
+    padding-right: 0;
+    marign-right: 0;
+    border-right: none;
+}
+.course-single-meta p {
+    color: #727375;
+    font-size: 20px;
+}
+.course-single-meta h4 {
+    color: #92278f;
+    font-size: 28px;
+}
+.subject-list-wrapper{
+  margin-top: 50px;
+}
+.sub-heading{
+    background: #f2f5f9 none repeat scroll 0 0;
+    border-radius: 4px;
+    box-shadow: 0 4px #eaecf1;
+    padding: 0 25px;
+    display: table;
+    width: 100%;
+    clear: both;
+    margin-bottom: 34px;
+    line-height: 50px;
+}
+.sub-heading > p{
+    float: right;
+    color: #818283;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 2px;
+    line-height: 50px;
+}
+.sub-heading h4{
+    color: #92278f;
+    line-height: 50px;
+    font-size: 20px;
+    float: left;
+    margin: 0;
+}
+.sub-heading h4 span{
+    color: #818283;
+    font-size: 16px;
+    display: inline-block;
+    padding-left: 10px;
+}
+.subject-list{
+    padding: 0 0 36px;
+}
+.panel-group.subject-list{
+  margin-bottom: 70px;
+  padding-bottom: 0;
+}
+.subject-list li{
+    border-bottom: 1px solid #f2f5f9;
+    display: block;
+}
+.subject-list li:first-child{
+    padding-top: 0;
+}
+.subject-list li:last-child{
+    border-bottom: 0;
+}
+.subject-list li:last-child .subject-info{
+  margin-bottom: 70px;
+}
+.subject-list li.panel{
+    margin-top: 0 !important;
+    border-top: none;
+}
+.subject-list li p{
+  margin: 0;
+}
+.subject-list li .subject-name{
+    font-size: 16px;
+    color: #727375;
+    line-height: 45px ;
+    position: relative;
+    cursor: pointer;
+    padding: 0 30px;
+    display: block;
+    -webkit-transition: .4s;
+    transition: .4s;
+    text-decoration: none;
+}
+.subject-list li.active .subject-name.collapsed{
+  background-color: transparent;
+  color: #727375;
+}
+.subject-list li.active .subject-name{
+  background-color: #f2f5f9;
+  color: #92278f;
+}
+.subject-list li .subject-name:hover,
+.subject-list li .subject-name[aria-expanded="true"]{
+    color: #92278f;
+}
+.subject-list li.active .subject-name.collapsed:before{
+  opacity: 0;
+  visibility: hidden;
+  padding-left: 0;
+  width: 0;
+}
+.subject-list li .subject-name:before{
+    content: "\e93d";
+    font-family: spkgarten;
+    opacity: 0;
+    width: 0;
+    visibility: hidden;
+    font-size: 16px;
+    display: inline-block;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    padding-right: 5px;
+    padding-left: 0;
+}
+.subject-list li.active .subject-name:before,
+.subject-list li .subject-name:hover:before,
+.subject-list li .subject-name[aria-expanded="true"]:before{
+    opacity: 1;
+    visibility: visible;
+    padding-left: 10px;
+    width: 30px;
+}
+.subject-list li.active .subject-name:before,
+.subject-list li .subject-name[aria-expanded="true"]:before{
+    content: "\e90c";
+}
+.subject-list li .subject-info{
+  display: none;
+  transition: .5s;
+}
+.subject-list li.active .subject-info{
+  display: block;
+}
+.subject-list li .weekly-schedule{
+    color: #727375;
+    float: right;
+}
+.subject-list li .subject-info{
+  background: #f2f5f9;
+  overflow: hidden;
+  padding: 0 30px;
+}
+.subject-info-wrapper{
+  padding: 10px;
+}
+.subject-and-teacher-details {
+    padding: 0 0 75px;
+}
+
+
+
+/* Teachers listing
+   ========================================================================== */
+.spkgarten-teachers-list .sp-section-title .subtitle{
+  color: #f26522;
+}
+.spkgarten-person{
+  margin-bottom: 30px;
+}
+.spkgarten-person .spkgarten-person-details{
+  text-align: center;
+  overflow: hidden;
+}
+.spkgarten-person .spkgarten-person-details .spkgarten-person-img {
+  position: relative;
+}
+.spkgarten-person .spkgarten-person-details .spkgarten-person-img img {
+  border-radius: 5px;
+  border-bottom: solid 7px #eceef0;
+  width: 100%;
+}
+.spkgarten-person .spkgarten-person-details .spkgarten-person-info {
+  margin-top: 30px;
+}
+.spkgarten-person .spkgarten-person-details .spkgarten-person-info a {
+  font-size: 24px;
+}
+.spkgarten-person .spkgarten-person-details p.spkgarten-person-designation {
+  font-size: 18px;
+  color: #6a6a6a;
+  font-weight: 100;
+}
+.teachers-details-features .sppb-addon-content {
+  text-align: center;
+}
+.teachers-details-features .sppb-addon-content .sppb-icon {
+  margin-bottom: 20px;
+}
+.teachers-details-features .sppb-addon-content .sppb-icon span {
+  font-size: 48px;
+}
+.teachers-details-features .sppb-addon-content h4 {
+  font-size: 22px;
+}
+.teachers-details-features .sppb-addon-content .sppb-addon-text {
+  color: #a0a0a0;
+}
+.teachers-details-features .sppb-addon-content .kidzy-icon-class,
+.teachers-details-features .sppb-addon-content h4.sppb-feature-box-title-1 {
+  color: #f7941d;
+}
+.teachers-details-features .sppb-addon-content .kidzy-icon-map,
+.teachers-details-features .sppb-addon-content h4.sppb-feature-box-title-2 {
+  color: #0072bc;
+}
+.teachers-details-features .sppb-addon-content .kidzy-icon-clock,
+.teachers-details-features .sppb-addon-content h4.sppb-feature-box-title-3 {
+  color: #8dc63f;
+}
+.teachers-details-features .sppb-addon-content .kidzy-icon-call,
+.teachers-details-features .sppb-addon-content h4.sppb-feature-box-title-4 {
+  color: #f26d7d;
+}
+
+/*teacher details*/
+.view-spkgarten-teacher{
+  margin-bottom: 75px;
+}
+.view-spkgarten-teacher .spkgarten-teacher-details-img {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.view-spkgarten-teacher .spkgarten-teacher-details-img img {
+  border-radius: 5px;
+  border-bottom: solid 7px #eceef0;
+  display: inline-block;
+}
+.spkgarten-teacher-details {
+  text-align: center;
+}
+.spkgarten-teacher-details .spkgarten-teacher-title {
+  font-size: 36px;
+  color: #92278f;
+  margin: 0;
+}
+.spkgarten-teacher-details .spkgarten-teacher-designation {
+  font-size: 24px;
+  color: #f26522;
+  margin: 5px 0 0 0;
+}
+.spkgarten-teacher-details .spkgarten-persion-social-icons {
+  margin: 0;
+  padding: 35px 0 10px 0;
+  list-style: none;
+}
+.spkgarten-teacher-details .spkgarten-persion-social-icons li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.spkgarten-teacher-details .spkgarten-persion-social-icons li a {
+  font-size: 22px;
+  color: #b9b9b9;
+}
+.spkgarten-teacher-details .spkgarten-persion-social-icons li a:hover {
+  color: #92278f;
+}
+.spkgarten-teacher-details .spkgarten-persion-social-icons li:last-child {
+  margin-right: 0;
+}
+.spkgarten-teacher-details p.spkgarten-person-email {
+  font-size: 18px;
+}
+.spkgarten-teacher-details .spkgarten-person-description{
+  margin: 60px 0;  
+}
+.spkgarten-teacher-details .spkgarten-person-description p {
+  color: #818283;
+}
+
+/*teacher timeline*/
+#teacher-timeline {
+  list-style: none;
+  position: relative;
+}
+#teacher-timeline:before {
+  content: " ";
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  width: 2px;
+  background-color: #92278f;
+  left: 50%;
+}
+#teacher-timeline .timeline-badge {
+  height: 90px;
+  position: absolute;
+  left: 50%;
+  z-index: 5;
+}
+#teacher-timeline .timeline-badge:before {
+  font-family: 'spkgarten';
+  content: "\e900";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  font-size: 30px;
+  color: #92278f ;
+}
+#teacher-timeline .timeline-badge .timeline-date {
+  font-size: 1.4em;
+}
+#teacher-timeline .timeline-movement {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+#teacher-timeline >.timeline-movement:last-child{
+  padding-bottom: 0;
+  bottom: -35px;
+}
+#teacher-timeline .timeline-movement:hover {
+  cursor: pointer;
+}
+#teacher-timeline .timeline-movement .timeline-item .timeline-panel {
+  text-align: initial;
+  padding: 20px;
+  border: solid 1px #dfdfdf;
+  border-radius: 5px;
+  position: relative;
+  width: 345px;
+  margin-left: 15px;
+}
+#teacher-timeline .timeline-movement .timeline-item .timeline-panel .title {
+  font-size: 16px;
+  color: #6f6f6f;
+  position: relative;
+  margin: 0;
+}
+#teacher-timeline .timeline-movement .timeline-item .timeline-panel .details {
+  font-size: 14px;
+  color: #9d9da7;
+  margin: 0;
+}
+/*for even timeline-movement*/
+#teacher-timeline .timeline-movement.even .timeline-badge{
+  height: 76px;
+}
+#teacher-timeline .timeline-movement.even .timeline-item .timeline-date{
+  line-height: 76px;
+}
+#teacher-timeline .timeline-movement .timeline-item .timeline-panel.left-part {
+  text-align: right;
+  margin-right: 15px;
+  float: right;
+  padding: 13px 20px;
+}
+#teacher-timeline .timeline-movement .timeline-item .timeline-panel.left-part .title:after {
+  right: -80px;
+  left: inherit;
+}
+#teacher-timeline .timeline-movement .timeline-item .timeline-panel.left-part:before {
+  left: inherit;
+  right: 1px;
+  -webkit-transform: rotate(45deg) translateY(-50%);
+  transform: rotate(45deg) translateY(-50%);
+  margin-top: -3px;
+}
+#teacher-timeline .timeline-movement .timeline-item .timeline-panel:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  width: 0;
+  height: 0;
+  border-width: 8px;
+  border-color: #fff #fff transparent transparent;
+  border-style: solid;
+  margin-top: -13px;
+  -webkit-transform: rotate(-135deg) translateY(-50%);
+  transform: rotate(-135deg) translateY(-50%);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 3px -3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px -3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+#teacher-timeline .timeline-movement .timeline-item .timeline-date {
+  font-size: 16px;
+  color: #9d9da7;
+  line-height: 90px;
+  margin: 0 10px;
+}
+
+
+/* Teachers Section
+   ========================================================================== */
+.single-teacher{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.teacher-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.teacher-img:after,
+.spkgarten-person .spkgarten-person-details .spkgarten-person-img:after {
+    position: absolute;
+    content: "";
+    background-color: rgba(146, 39, 143, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(0) scaleX(0);
+    transform: skew(0) scaleX(0);
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.teacher-img:hover:after,
+.spkgarten-person .spkgarten-person-details:hover .spkgarten-person-img:after{
+    -webkit-transform: skew(0) scaleX(1);
+    transform: skew(0) scaleX(1);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.teacher-img img{
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px #eceef0;
+    box-shadow: 0 6px #eceef0;
+    margin-bottom: 6px;
+}
+.teacher-social ,
+.spkgarten-person-social{
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 28px;
+    bottom: 0;
+    margin: auto;
+    padding: 0;
+    opacity: 0;
+    -webkit-transition: all 400ms ease;
+    transition: all 400ms ease;
+}
+.teacher-social li,
+.spkgarten-person-social li{
+    display: inline-block;
+}
+.teacher-social li a,
+.spkgarten-person-social li a{
+    color: #fff;
+    font-size: 25px;
+    margin-right: 10px;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.teacher-social li:last-child a,
+.spkgarten-person-social li:last-child a{
+    margin-right: 0;
+}
+.teacher-social li a.website:hover,
+.spkgarten-person-social li a.website:hover{
+    color: #00a7e9;
+}
+.teacher-social li a.facebook:hover,
+.spkgarten-person-social li a.facebook:hover{
+    color: #3b5998;
+}
+.teacher-social li a.twitter:hover,
+.spkgarten-person-social li a.twitter:hover{
+    color: #55acee;
+}
+.teacher-social li a.linkedin:hover,
+.spkgarten-person-social li a.linkedin:hover{
+    color: #1582b8;
+}
+.teacher-social li a.gplus:hover,
+.spkgarten-person-social li a.gplus:hover{
+    color: #dd4b39;
+}
+.teacher-social li a.instagram:hover,
+.spkgarten-person-social li a.instagram:hover{
+    color: #125688;
+}
+.teacher-img:hover .teacher-social,
+.spkgarten-person-details:hover .spkgarten-person-social{
+    transform: translate3d(0%, 0%, 0px);
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+.single-teacher > h3 {
+    color: #92278f;
+    font-size: 24px;
+    margin: 28px 0 10px;
+}
+.single-teacher > p {
+    color: #6a6a6a;
+    font-size: 18px;
+}
+
+
+/* Call to Action 
+   ========================================================================== */
+.spkgarten-callto-action{
+  margin: 0px;
+    padding: 55px 0;
+    background-image: url(../img/home-bottom-cta-bg.html);
+}
+.spkgarten-callto-action .sp-title{
+  font-size: 32px;
+  color: #92278f;
+}
+
+.spkgarten-callto-action .sppb-btn{
+  color: #fff;
+}
+/* Related Courses 
+   ========================================================================== */
+
+
+
+
+/* kidzy events 
+   ========================================================================== */
+.sp-kidzy-event {
+  position: relative;
+  margin-bottom: 55px;
+}
+.sp-kidzy-event .events-img {
+  position: relative;
+}
+.sp-kidzy-event .events-img img{
+  width: 100%; 
+}
+.sp-kidzy-event .sp-overlay .icon{
+  font-size: 110px;
+}
+.sp-kidzy-event .event-description {
+  padding-top: 50px;
+  position: relative;
+  text-transform: capitalize;
+}
+.sp-kidzy-event .event-date {
+  background: #0072bc;
+  border-radius: 4px;
+  box-shadow: 0 4px #045a91;
+  color: #fff;
+  font-size: 12.66px;
+  left: 18px;
+  line-height: 0.9;
+  padding: 13px 18px;
+  text-transform: lowercase;
+  position: absolute;
+  top: -32px;
+}
+.sp-kidzy-event .event-date span {
+  display: block;
+  color: #fff;
+  font-size: 32px;
+}
+.sp-kidzy-event .event-title{
+  font-size: 24px;
+  color: #000;
+}
+.event-description ul.event-info {
+  padding: 0;
+  margin: 0;
+}
+.event-description ul.event-info *{
+  color: #979797;
+}
+.event-description ul.event-info > li {
+  display: block;
+  list-style: none;
+}
+.event-description ul.event-info > li span{
+  color: #5d5d5d;
+}
+.event-description ul.event-info > li:last-child:after {
+  display: none;
+}
+.event-description a {
+  color: #000;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.event-description a:hover {
+  color: #92278f;
+}
+.sp-kidzy-event:nth-child(2n) .event-date {
+  background: #f26522;
+  box-shadow: 0 4px #d54d0d;
+}
+.sp-kidzy-event:nth-child(3n) .event-date {
+  background: #8dc63f;
+  box-shadow: 0 4px #72a230;
+}
+.sp-kidzy-event:nth-child(4n) .event-date {
+  background: #92278f;
+  box-shadow: 0 4px #6a1c68;
+}
+.sp-kidzy-event:nth-child(5n) .event-date {
+  background: #ed117d;
+  box-shadow: 0 4px #bd0e64;
+}
+.sp-kidzy-event:nth-child(6n) .event-date {
+  background: #f1c712;
+  box-shadow: 0 4px #c4a20c;
+}
+.spkgartencountdown{
+  margin-bottom: 40px;
+}
+.spkgartencountdown >div{
+  display: inline-block;
+  background: #0072bc;
+  border-radius: 4px;
+  box-shadow: 0 5px #045a91;
+  display: inline-block;
+  height: 86px;
+  padding-top: 25px;
+  text-align: center;
+  width: 86px;
+  margin-right: 17px;
+}
+.spkgartencountdown .number{
+  color: #fff;
+  font-size: 32px;
+  line-height: 0.8;
+}
+.spkgartencountdown .string{
+  display: block;
+  font-size: 12.66px;
+  color: #fff;
+  text-Transform: capitalize;
+  line-height: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: inherit;
+}
+.spkgartencountdown >div:nth-child(2n) {
+    background: #8dc63f;
+    box-shadow: 0 5px #6a942f;
+}
+.spkgartencountdown >div:nth-child(3n) {
+    background: #f26522;
+    box-shadow: 0 5px #bf4f1b;
+}
+.spkgartencountdown >div:nth-child(4n) {
+    background: #92278f;
+    box-shadow: 0 5px #5e195c;
+}
+.kidzy-event-details{
+  margin-bottom: 80px;
+}
+.kidzy-event-details .event-description .event-title{
+  color: #000;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.kidzy-event-details .event-description .details{
+  color: #565656;
+  font-size: 14px;
+}
+.view-event #sp-main-body >.container{
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.spkgarten-event-map{
+  margin-top: 50px;
+}
+#map {
+    height: 550px;
+    width: 100%;
+    position: relative;
+}
+#map.event-map {
+    height: 300px;
+    width: 100%;
+}

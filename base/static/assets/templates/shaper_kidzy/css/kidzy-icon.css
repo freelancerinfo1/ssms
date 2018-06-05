@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'kidzyicon';
+    src:    url('../fonts/kidzy-iconeeb2.eot?8xir71');
+    src:    url('../fonts/kidzy-iconeeb2.eot?8xir71#iefix') format('embedded-opentype'),
+        url('../fonts/kidzy-iconeeb2.html?8xir71') format('truetype'),
+        url('../fonts/kidzy-iconeeb2.woff?8xir71') format('woff'),
+        url('../fonts/kidzy-iconeeb2.svg?8xir71#kidzy-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" kidzy-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'kidzyicon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.kidzy-icon-splash:before {
+    content: "\e900";
+}
+.kidzy-icon-hover:before {
+    content: "\e913";
+}
+.kidzy-icon-call:before {
+    content: "\e901";
+}
+.kidzy-icon-class:before {
+    content: "\e902";
+}
+.kidzy-icon-clock:before {
+    content: "\e903";
+}
+.kidzy-icon-color:before {
+    content: "\e904";
+}
+.kidzy-icon-food:before {
+    content: "\e905";
+}
+.kidzy-icon-link:before {
+    content: "\e906";
+}
+.kidzy-icon-map:before {
+    content: "\e907";
+}
+.kidzy-icon-music-class:before {
+    content: "\e908";
+}
+.kidzy-icon-parents:before {
+    content: "\e909";
+}
+.kidzy-icon-play:before {
+    content: "\e90a";
+}
+.kidzy-icon-prev:before {
+    content: "\e90b";
+}
+.kidzy-icon-next:before {
+    content: "\e90c";
+}
+.kidzy-icon-reader:before {
+    content: "\e90d";
+}
+.kidzy-icon-teacher:before {
+    content: "\e90e";
+}
+.kidzy-icon-testimonial:before {
+    content: "\e90f";
+}
+.kidzy-icon-translator:before {
+    content: "\e910";
+}
+.kidzy-icon-trophy:before {
+    content: "\e911";
+}
+.kidzy-icon-user:before {
+    content: "\e912";
+}

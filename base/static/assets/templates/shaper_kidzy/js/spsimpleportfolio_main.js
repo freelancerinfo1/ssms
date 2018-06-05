@@ -1,0 +1,1 @@
+jQuery(function($){$('.btn-zoom').magnificPopup({type:'image',mainClass:'mfp-with-zoom',zoom:{enabled:true,duration:300,easing:'ease-in-out',opener:function(openerElement){return openerElement.next('img')?openerElement:openerElement.find('img');}},gallery:{enabled:true,navigateByImgClick:true,preload:[0,1]}});});

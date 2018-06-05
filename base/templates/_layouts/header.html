@@ -1,0 +1,143 @@
+{% load i18n %}
+{% load compress %}
+{% load staticfiles %}
+<section id="sp-top-bar">
+         <div class="container">
+            <div class="row">
+               <div id="sp-top1" class="col-sm-12 col-md-12">
+                  <div class="sp-column ">
+                    
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <header id="sp-header">
+         <div class="container">
+            <div class="row">
+               <div id="sp-logo" class="col-xs-4 col-sm-3 col-md-3">
+                  <div class="sp-column ">
+                     <a class="logo" href="/">
+                        <h1><img class="sp-default-logo" src="/static/assets/templates/shaper_kidzy/images/presets/preset1/logo.png" alt="Shaper Kidzy"><img class="sp-retina-logo" src="/static/assets/templates/shaper_kidzy/images/presets/preset1/logo%402x.png" alt="Shaper Kidzy" width="230" height="182"></h1>
+                     </a>
+                  </div>
+               </div>
+               <div id="sp-menu" class="col-xs-8 col-sm-9 col-md-9">
+                  <div class="sp-column ">
+                     <div class="sp-module  sp-top-search">
+                        <div class="sp-module-content">
+                           <div class="top-search-wrapper">
+                              <div class="icon-top-wrapper">
+                                 <i class="fa fa-search search-open-icon" aria-hidden="true"></i>
+                              </div>
+                              <div class="input-overlay"></div>
+                              <div class="top-search-input-wrap">
+                                 <form action="http://demo.joomshaper.com/2016/kidzy/index.php/en/" method="post">
+                                    <input name="searchword" maxlength="200" class="mod-search-searchword inputbox sp-top-search" type="text" size="20" value="Search ..." onblur="if (this.value=='') this.value='Search ...';" onfocus="if (this.value=='Search ...') this.value='';" /> <input type="hidden" name="task" value="search" />
+                                    <input type="hidden" name="option" value="com_search" />
+                                    <input type="hidden" name="Itemid" value="551" />
+                                 </form>
+                                 <i class="fa fa-times search-close-icon" aria-hidden="true"></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class='sp-megamenu-wrapper'>
+                        <a id="offcanvas-toggler" class="visible-sm visible-xs" href="#"><i class="fa fa-bars"></i></a>
+                        <ul class="sp-megamenu-parent menu-fade-up hidden-sm hidden-xs">
+                           <li class="sp-menu-item sp-has-child"><a href="/">Home</a></li>
+                           <li class="sp-menu-item sp-has-child">
+                              <a href="#">SSMS</a>
+                              <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;">
+                                 <div class="sp-dropdown-inner">
+                                    <ul class="sp-dropdown-items">
+                                       <!-- <li class="sp-menu-item"><a href="{% url 'courses' %}">Courses</a></li> -->
+                                       <li class="sp-menu-item"><a href="{% url 'teachers' %}">Teachers</a></li>
+                                       <li class="sp-menu-item"><a href="{% url 'class_routines' %}">Class Routines</a></li>
+                                       <li class="sp-menu-item"></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="sp-menu-item sp-has-child">
+                              <a href="#">About Us</a>
+                              <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;">
+                                 <div class="sp-dropdown-inner">
+                                    <ul class="sp-dropdown-items">
+                                       <li class="sp-menu-item"><a href="{% url 'about_us' %}">About Us</a></li>
+                                       <li class="sp-menu-item"></li>
+                                       <li class="sp-menu-item"><a href="{% url 'contact_us' %}">Contact Us</a></li>
+                                       <li class="sp-menu-item"></li>
+                                       <li class="sp-menu-item"></li>
+                                       
+                                    </ul>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="sp-menu-item sp-has-child">
+                              <a href="{% url 'news_and_events' %}">Media</a>
+                              <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;">
+                                 <div class="sp-dropdown-inner">
+                                    <ul class="sp-dropdown-items">
+                                       <li class="sp-menu-item"></li>
+                                       <li class="sp-menu-item"><a href="{% url 'news_and_events' %}">News And Events</a></li>
+                                       <li class="sp-menu-item"><a href="{% url 'gallery' %}">Gallery</a></li>
+                                       <li class="sp-menu-item"><a href="{% url 'videos' %}">Videos</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="sp-menu-item sp-has-child">
+                              <a href="#">Profile!</a>
+                              <div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-full container" style="">
+                                 <div class="sp-dropdown-inner">
+                                    <div class="row">
+                                       <div class="col-sm-3">
+                                          <ul class="sp-mega-group">
+                                             <li class="sp-menu-item sp-has-child">
+                                                <a class="sp-group-title" href="#">Academics</a>
+                                                <ul class="sp-mega-group-child sp-dropdown-items">
+                                                   <li class="sp-menu-item"><a href="{% url 'topper' %}">Toppers</a></li>
+                                                   <li class="sp-menu-item"><a href="{% url 'orientation_program' %}">Orientation Program</a></li>
+                                                   <li class="sp-menu-item"><a href="Profile/Academics/awards.html">Awards</a></li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                       <div class="col-sm-3">
+                                          <ul class="sp-mega-group">
+                                             <li class="sp-menu-item sp-has-child">
+                                                <a class="sp-group-title" href="#">Beyond Academics</a>
+                                                <ul class="sp-mega-group-child sp-dropdown-items">
+                                                   <li class="sp-menu-item"><a href="{% url 'sports' %}">Sports</a></li>
+                                                   <li class="sp-menu-item"><a href="{% url 'cocarricular' %}">Co-Carricular</a></li>
+                                                   <li class="sp-menu-item"><a href="{% url 'extracurricular' %}">Extra-Curricular</a></li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                       <div class="col-sm-3">
+                                          <ul class="sp-mega-group">
+                                             <li class="sp-menu-item sp-has-child">
+                                                <a class="sp-group-title" href="#">Infrastructure</a>
+                                                <ul class="sp-mega-group-child sp-dropdown-items">
+                                                   <li class="sp-menu-item"><a href="{% url 'facilitie' %}">Facilities</a></li>
+                                                   <li class="sp-menu-item"><a href="{% url 'smartclass' %}">Smart Class </a></li>
+                                                   <li class="sp-menu-item"><a href="{% url 'life_at_school' %}">Life At School</a></li>
+                                                   <li class="sp-menu-item"><a href="Profile/users-component/registration-form.html"></a></li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                      
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>

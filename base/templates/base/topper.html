@@ -1,0 +1,74 @@
+{% extends "_layouts/base.html" %}
+
+
+
+{% block page_title %}Your Site - Home{% endblock %}
+{% block page_class %}home-page{% endblock %}
+{% block content %}
+<section id="sp-page-title">
+            <div class="row">
+               <div id="sp-title" class="col-sm-12 col-md-12">
+                  <div class="sp-column ">
+                     <div class="sp-page-title" style="background-image: url(/static/assets/images/demo/subheader.png);">
+                        <div class="container">
+                           <h2>Toppers</h2>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <br>
+         <br>
+         <section id="sp-main-body">
+            <div class="container">
+
+              <div class="container-fluid">
+                <h3>10 th toppers</h3>
+  <div class="row">
+
+    {% for top in toppers_10 %}
+    <div class="col-md-6" style="margin-bottom: 20px;">
+      <div class="col-md-12" >
+         <div class="col-md-6" ><img src="{{ top.image.url }}" style="width: 255px;height: 255px;"></div>
+          <div class="col-md-6" >
+            <p>Name: {{ top.name }}</p>
+            <p>Mark: {{ top.mark }} / 500</p>
+          </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+              <div class="container-fluid">
+                <h3>12 th toppers</h3>
+  <div class="row">
+
+    {% for top in toppers_12 %}
+    <div class="col-md-6" style="margin-bottom: 20px;">
+      <div class="col-md-12" >
+         <div class="col-md-6" ><img src="{{ top.image.url }}" style="width: 255px;height: 255px;"></div>
+          <div class="col-md-6" >
+            <p>Name: {{ top.name }}</p>
+            <p>Mark: {{ top.mark }} / 1200</p>
+          </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+               </div>
+            </div>
+
+            </div>
+      </section>
+
+
+{% endblock %}
+
+{% block cusjs %}
+
+  {% endblock cusjs %}

@@ -1,0 +1,127 @@
+/*.sp-overlay*/
+.sp-overlay {
+  background: rgba(146,39,143,.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(-10deg) scale(.8);
+  transform: rotate(-10deg) scale(.8);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.sp-overlay .icon{
+  color: #fff;
+  font-size: 35px;
+  position: absolute;
+  top: 50%;  
+  left: 50%;  
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.sp-overlay .icon:hover{
+  opacity: .6;
+}
+.sp-kidzy-event:hover .events-img img{
+  -webkit-transform: scale(1.07) rotate(2deg);
+  transform: scale(1.07) rotate(2deg);
+}
+.sp-kidzy-event:hover .sp-overlay {
+  opacity: 1;
+  -webkit-transform: translate(0, 0) rotate(0deg) scale(1);
+  transform: translate(0, 0) rotate(0deg) scale(1);
+}
+.sp-kidzy-event:hover .icon{
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+/*//End .sp-overlay*/
+
+
+.sp-kidzy-event {
+  position: relative;
+}
+.sp-kidzy-event .events-img{
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.sp-kidzy-event .events-img img{
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.sp-kidzy-event .event-date {
+  background: #0072bc;
+  border-radius: 4px;
+  box-shadow: 0 4px #045a91;
+  color: #fff;
+  font-size: 12.66px;
+  left: 18px;
+  line-height: 0.9;
+  padding: 8px 13px;
+  position: absolute;
+  top: -25px;
+}
+.sp-kidzy-event .event-date span {
+  display: block;
+  color: #fff;
+  font-size: 24px;
+}
+.sp-kidzy-event .event-description {
+  position: relative;
+  padding-top: 50px;
+}
+.sp-kidzy-event .event-description ul.event-info {
+  padding: 0;
+  margin: 0;
+}
+.sp-kidzy-event .event-description ul.event-info *{
+  color: #979797;
+}
+.sp-kidzy-event .event-description ul.event-info > li {
+  display: block;
+  list-style: none;
+  font-size: 14px;
+}
+.sp-kidzy-event .event-description ul.event-info span{
+  color: #5d5d5d;
+}
+.sp-kidzy-event .event-description a {
+  color: #5d5d5d;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.sp-kidzy-event .event-description .event-location{
+  font-size: 14px;
+}
+.sp-kidzy-event .event-description a:hover {
+  color: #92278f;
+}
+.sp-kidzy-event:nth-child(2n) .event-date {
+  background: #f26522;
+  box-shadow: 0 4px #d54d0d;
+}
+.sp-kidzy-event:nth-child(3n) .event-date {
+  background: #8dc63f;
+  box-shadow: 0 4px #72a230;
+}
+.sp-kidzy-event:nth-child(4n) .event-date {
+  background: #92278f;
+  box-shadow: 0 4px #6a1c68;
+}
+.sp-kidzy-event:nth-child(5n) .event-date {
+  background: #ed117d;
+  box-shadow: 0 4px #bd0e64;
+}
+.sp-kidzy-event:nth-child(6n) .event-date {
+  background: #f1c712;
+  box-shadow: 0 4px #c4a20c;
+}

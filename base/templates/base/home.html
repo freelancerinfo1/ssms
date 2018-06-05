@@ -1,0 +1,702 @@
+{% extends "_layouts/base.html" %}
+
+{% block css %}
+{{block.super}}
+<style>
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+</style>
+{% endblock css %}
+
+{% block page_title %}Your Site - Home{% endblock %}
+{% block page_class %}home-page{% endblock %}
+{% block content %}
+<section id="sp-page-title">
+         <div class="row">
+            <div id="sp-title" class="col-sm-12 col-md-12">
+               <div class="sp-column "></div>
+            </div>
+         </div>
+      </section>
+      <section id="sp-main-body">
+         <div class="row">
+            <div id="sp-component" class="col-sm-12 col-md-12">
+               <div class="sp-column ">
+                  <div id="system-message-container"></div>
+                  <div id="sp-page-builder" class="sp-page-builder  page-1">
+                     <div class="page-content">
+                        <div id="section-id-1525072295" class="sppb-section ">
+                           <div class="sppb-container-inner">
+                              <div class="sppb-row">
+                                 <div class="sppb-col-sm-12">
+                                    <div id="column-id-1525072296" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072297" class="clearfix">
+                                             <div class="sppb-addon sppb-slider-wrapper sppb-slider-fullwidth-wrapper owl-theme varition-animation" style="background-image: url(/static/assets/images/2016/05/10/slider-bg.png);">
+                                                <div class="sppb-slider-item-wrapper">
+                                                   <div id="slide-fullwidth" class="owl-carousel" data-sppb-slide-ride="true">
+                                                      {% for banner in banners %}
+                                                      <div class="sppb-slideshow-fullwidth-item item">
+                                                         <div class="sppb-slide-item-bg sppb-slideshow-fullwidth-item-bg">
+                                                            <div class="container">
+                                                               <div class="row">
+                                                                  <div class="col-sm-6"><div class="sppb-slideshow-fullwidth-item-text"><h1 class="sppb-fullwidth-title  sppb-wow fadeInLeftBig"> <small class="sppb-slidehsow-sub-title  sppb-wow fadeInLeftBig">{{ banner.caption }}</small>{{ banner.slide_text }}</h1><div class="sppb-fw-slider-button-wrapper  sppb-wow fadeInLeftBig" data-sppb-wow-delay="500ms"> <a target="_self" href="#" class="btn btn-primary"> <span>Admission Now</span></a></div></div></div>
+
+         <div class="col-sm-6">
+            <div class="slider-img"><img alt="" class="slide-circle" src="/static/assets/images/demo/slider/slide-circle.png"><img alt="" class="slide-cloud" src="/static/assets/images/demo/slider/slide-rain-cloud.png"><img alt="" class="slide-sun" src="/static/assets/images/demo/slider/slide-sun.png"><img alt="" class="slide-girl  sppb-wow zoomIn {% if banner.is_fadeinleft %}fadeInLeft {% endif %}" src="{{ banner.image.url }}" data-sppb-wow-duration="600ms" data-sppb-wow-delay="300ms"></div>
+         </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                      {% endfor %}
+                                                      <!-- <div class="sppb-slideshow-fullwidth-item item">
+                                                         <div class="sppb-slide-item-bg sppb-slideshow-fullwidth-item-bg">
+                                                            <div class="container">
+                                                               <div class="row">
+                                                                  <div class="col-sm-6">
+                                                                     <div class="sppb-slideshow-fullwidth-item-text">
+                                                                        <h1 class="sppb-fullwidth-title  sppb-wow fadeInUp"> <small class="sppb-slidehsow-sub-title  sppb-wow fadeInUp">Rules of</small>Healthy Development. </h1>
+                                                                        <div class="sppb-fw-slider-button-wrapper  sppb-wow fadeInUp" data-sppb-wow-delay="500ms"> <a target="_self" href="#" class="btn btn-primary"> <span>Admission Now</span></a></div>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div class="col-sm-6">
+                                                                     <div class="slider-img"><img alt="" class="slide-circle" src="/static/assets/images/demo/slider/slide-circle.png"><img alt="" class="slide-cloud" src="/static/assets/images/demo/slider/slide-rain-cloud.png"><img alt="" class="slide-sun" src="/static/assets/images/demo/slider/slide-sun.png"><img alt="" class="slide-girl  sppb-wow fadeInLeft" src="/static/assets/images/2016/05/12/child2.png" data-sppb-wow-duration="600ms" data-sppb-wow-delay="300ms"></div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div> -->
+                                                   </div>
+                                                </div>
+                                                <div class="customNavigation"><a class="sppbSlidePrev"><i class="fa fa-angle-left"></i></a><a class="sppbSlideNext"><i class="fa fa-angle-right"></i></a></div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                      <!--   <section id="section-id-1525072298" class="sppb-section  sp-kidzy-featured-list spb-res-padding">
+                           <div class="sppb-row-container">
+                              <div class="sppb-section-title sppb-text-center">
+                                 <h2 class="sppb-title-heading">Welcome to SSM</h2>
+                                 <p class="sppb-title-subheading">Starting with the new school year in our kindergarten</p>
+                              </div>
+                              <div class="sppb-row">
+                                 <div class="sppb-col-sm-3">
+                                    <div id="column-id-1525072299" class="sppb-column  sppb-wow fadeInDown" data-sppb-wow-duration="300ms" data-sppb-wow-delay="100ms">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072300" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-addon-single-image-container"><img class="sppb-img-responsive" src="/static/assets/images/2016/05/04/home-feature-01.jpg" alt="image"></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div id="sppb-addon-1525072301" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                <div class="svg-overlay">
+                                                   <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                      <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                   </svg>
+                                                </div>
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-icon"><span class="sppb-icon-container"><i class="kd kidzy-icon-reader"></i></span></div>
+                                                   <h4 class="sppb-addon-title sppb-feature-box-title">Active Learning</h4>
+                                                   <div class="sppb-addon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="sppb-col-sm-3">
+                                    <div id="column-id-1525072302" class="sppb-column  sppb-wow fadeInDown" data-sppb-wow-duration="500ms" data-sppb-wow-delay="200ms">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072303" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-addon-single-image-container"><img class="sppb-img-responsive" src="/static/assets/images/2016/05/04/home-feature-02.jpg" alt="image"></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div id="sppb-addon-1525072304" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                <div class="svg-overlay">
+                                                   <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                      <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                   </svg>
+                                                </div>
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-icon"><span class="sppb-icon-container"><i class="kd kidzy-icon-music-class"></i></span></div>
+                                                   <h4 class="sppb-addon-title sppb-feature-box-title">Music Lessons</h4>
+                                                   <div class="sppb-addon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="sppb-col-sm-3">
+                                    <div id="column-id-1525072305" class="sppb-column  sppb-wow fadeInDown" data-sppb-wow-duration="500ms" data-sppb-wow-delay="300ms">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072306" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-addon-single-image-container"><img class="sppb-img-responsive" src="/static/assets/images/2016/05/04/home-feature-03.jpg" alt="image"></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div id="sppb-addon-1525072307" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                <div class="svg-overlay">
+                                                   <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                      <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                   </svg>
+                                                </div>
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-icon"><span class="sppb-icon-container"><i class="kd kidzy-icon-teacher"></i></span></div>
+                                                   <h4 class="sppb-addon-title sppb-feature-box-title">Professional Teachers</h4>
+                                                   <div class="sppb-addon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="sppb-col-sm-3">
+                                    <div id="column-id-1525072308" class="sppb-column  sppb-wow fadeInDown" data-sppb-wow-duration="500ms" data-sppb-wow-delay="400ms">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072309" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-addon-single-image-container"><img class="sppb-img-responsive" src="/static/assets/images/2016/05/04/home-feature-04.jpg" alt="image"></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div id="sppb-addon-1525072310" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                <div class="svg-overlay">
+                                                   <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                      <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                   </svg>
+                                                </div>
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-icon"><span class="sppb-icon-container"><i class="kd kidzy-icon-parents"></i></span></div>
+                                                   <h4 class="sppb-addon-title sppb-feature-box-title">Parents Day</h4>
+                                                   <div class="sppb-addon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section> -->
+                        <section id="section-id-1525072311" class="sppb-section ">
+                           <div class="sppb-row-container">
+                              <div class="sppb-row">
+                                 <div class="sppb-col-sm-5">
+                                    <div id="column-id-1525072312" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072313" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-single-image sppb-text-left ">
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-addon-single-image-container"><img class="sppb-img-responsive" src="/static/assets/images/2016/05/05/home-enroll-section-" alt=""></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div id="sppb-addon-1525072314" class="clearfix">
+                                             <div class="sppb-empty-space  clearfix"></div>
+                                          </div>
+                                          <div id="sppb-addon-1525072315" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-cta ">
+                                                <div>
+                                                   <h3 class="sppb-addon-title sppb-cta-title">Kindergarten School</h3>
+                                                   <p class="sppb-cta-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                                                   <div><a href="#" id="btn-1525072315" class="sppb-btn sppb-btn-primary sppb-btn-rounded">Enroll Your Child</a></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="sppb-col-sm-7">
+                                    <div id="column-id-1525072316" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072317" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-single-image sppb-text-right ">
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-addon-single-image-container"><img class="sppb-img-responsive" src="/static/assets/images/2016/05/05/home-enroll-left-img.png" alt="image"></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section id="section-id-1525072318" class="sppb-section  spb-res-padding">
+                           <div class="sppb-row-container">
+                              <div class="sppb-section-title sppb-text-center">
+                                 <h2 class="sppb-title-heading"></h2>
+                                 <p class="sppb-title-subheading"></p>
+                              </div>
+                              <div class="sppb-row">
+                                 <div class="sppb-col-sm-12">
+                                    <div id="column-id-1525072319" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072320" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-module ">
+                                                <div class="sppb-addon-content">
+                                                   <div id="sp-kindergarten-courses137" class="spkgarten kindergarten-courses ">
+                                                      <div class="spkgarten-row">
+                                                         <div class="spkgarten-col-sm-4">
+                                                            <div class="sp-kidzy-class">
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section id="section-id-1525072321" class="sppb-section  spb-res-padding">
+                           <div class="sppb-row-container">
+                              <div class="sppb-row">
+                                 <div class="sppb-col-sm-12">
+                                    <div id="column-id-1525072322" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072323" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-addon-single-image-container"><img class="sppb-img-responsive" src="/static/assets/images/2016/05/05/home-school-facilities.png" alt="image"></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div id="sppb-addon-1525072324" class="clearfix">
+                                             <div class="sppb-empty-space  clearfix"></div>
+                                          </div>
+                                          <div id="sppb-addon-1525072325" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-text-block sppb-text-center sp-kidzy-text-color sp-kidzy-major-color">
+                                                <h2 class="sppb-addon-title">School Facilities</h2>
+                                                <div class="sppb-addon-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna<br />aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</div>
+                                             </div>
+                                          </div>
+                                          <div id="section-id-1525072326" class="sppb-section ">
+                                             <div class="sppb-container-inner">
+                                                <div class="sppb-row">
+                                                   <div class="sppb-col-sm-3">
+                                                      <div id="column-id-1525072327" class="sppb-column">
+                                                         <div class="sppb-column-addons">
+                                                            <div id="sppb-addon-1525072328" class="clearfix">
+                                                               <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                                  <div class="svg-overlay">
+                                                                     <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                                        <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                                     </svg>
+                                                                  </div>
+                                                                  <div class="sppb-addon-content">
+                                                                     <div class="sppb-icon"><span class="sppb-icon-container"><i class=""></i></span></div>
+                                                                     <h4 class="sppb-addon-title sppb-feature-box-title">Sports</h4>
+                                                                     <div class="sppb-addon-text">Lorem ipsum dolor sit amet,consectetur adipisicing.</div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="sppb-col-sm-3">
+                                                      <div id="column-id-1525072329" class="sppb-column">
+                                                         <div class="sppb-column-addons">
+                                                            <div id="sppb-addon-1525072330" class="clearfix">
+                                                               <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                                  <div class="svg-overlay">
+                                                                     <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                                        <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                                     </svg>
+                                                                  </div>
+                                                                  <div class="sppb-addon-content">
+                                                                     <h4 class="sppb-addon-title sppb-feature-box-title">Healthy Meals</h4>
+                                                                     <div class="sppb-addon-text">Lorem ipsum dolor sit amet,consectetur adipisicing.</div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="sppb-col-sm-3">
+                                                      <div id="column-id-1525072331" class="sppb-column">
+                                                         <div class="sppb-column-addons">
+                                                            <div id="sppb-addon-1525072332" class="clearfix">
+                                                               <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                                  <div class="svg-overlay">
+                                                                     <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                                        <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                                     </svg>
+                                                                  </div>
+                                                                  <div class="sppb-addon-content">
+                                                                     <h4 class="sppb-addon-title sppb-feature-box-title">Multimedia Class</h4>
+                                                                     <div class="sppb-addon-text">Lorem ipsum dolor sit amet,consectetur adipisicing.</div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="sppb-col-sm-3">
+                                                      <div id="column-id-1525072333" class="sppb-column">
+                                                         <div class="sppb-column-addons">
+                                                            <div id="sppb-addon-1525072334" class="clearfix">
+                                                               <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                                  <div class="svg-overlay">
+                                                                     <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                                        <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                                     </svg>
+                                                                  </div>
+                                                                  <div class="sppb-addon-content">
+                                                                     <h4 class="sppb-addon-title sppb-feature-box-title">Music And Art Class</h4>
+                                                                     <div class="sppb-addon-text">Lorem ipsum dolor sit amet,consectetur adipisicing.</div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section id="section-id-1525072335" class="sppb-section  spb-res-padding">
+                           <div class="sppb-row-container">
+                              <div class="sppb-section-title sppb-text-center">
+                                 <h2 class="sppb-title-heading">Builders Of Our School</h2>
+                                 <p class="sppb-title-subheading"></p>
+                              </div>
+                              <div class="sppb-row">
+                                 {% for tec in home_teachers%}
+                                 <div class="sppb-col-sm-3">
+                                    <div id="column-id-1525072336" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072337" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-persion sppb-text-center ">
+                                                <div class="sppb-addon-content">
+                                                   <div class="sppb-person-image">
+                                                      <img class="sppb-img-responsive" src="{{ tec.image.url }}" alt="{{ tec.name }}">
+                                                      <div class="sppb-person-social-icons">
+                                                         <ul class="sppb-person-social">
+                                                            <li><a target="_blank" href="http://www.facebook.com/joomshaper"><i class="fa fa-facebook"></i></a></li>
+                                                            <li><a target="_blank" href="http://twitter.com/joomshaper"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a target="_blank" href="http://plus.google.com/+Joomshapers"><i class="fa fa-google-plus"></i></a></li>
+                                                            <li><a target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>
+                                                         </ul>
+                                                      </div>
+                                                   </div>
+                                                   <div class="sppb-person-information"><span class="sppb-person-name">{{ tec.name }}</span><span class="sppb-person-designation">{{ tec.position }}</span></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                {% endfor %}
+                              </div>
+                           </div>
+                        </section>
+                        <section id="section-id-1525072344" class="sppb-section  spb-res-mixed-padding">
+                           <div class="sppb-row-container">
+                              <div class="sppb-row">
+                                 <div class="sppb-col-sm-12">
+                                    <div id="column-id-1525072345" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072346" class="clearfix">
+                                             <div id="sppb-testimonial-pro-1525072346" class="sppb-carousel sppb-testimonial-pro sppb-slide sppb-text-center" data-sppb-ride="sppb-carousel">
+                                                <div class="sppb-carousel-inner">
+                                                   <div class="sppb-item  active">
+                                                      <div class="sppb-testimonial-img"><img class="sppb-img-responsive sppb-avatar sppb-img-circle" src="/static/assets/images/2016/05/05/testimonial01.jpg" alt=""></div>
+                                                      <div class="sppb-testimonial-client">
+                                                         <i class="kd kidzy-icon-testimonial"></i>
+                                                         <p class="pro-client-name">Jaklin Nowkin</p>
+                                                      </div>
+                                                      <p class="pro-client-position">Parents</p>
+                                                      <div class="sppb-testimonial-message">“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.”</div>
+                                                   </div>
+                                                   <div class="sppb-item ">
+                                                      <div class="sppb-testimonial-img"><img class="sppb-img-responsive sppb-avatar sppb-img-circle" src="/static/assets/images/2016/05/05/testimonial02.jpg" alt=""></div>
+                                                      <div class="sppb-testimonial-client">
+                                                         <i class="kd kidzy-icon-testimonial"></i>
+                                                         <p class="pro-client-name">Fanny Greer</p>
+                                                      </div>
+                                                      <p class="pro-client-position">Parents</p>
+                                                      <div class="sppb-testimonial-message">“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.”</div>
+                                                   </div>
+                                                   <div class="sppb-item ">
+                                                      <div class="sppb-testimonial-img"><img class="sppb-img-responsive sppb-avatar sppb-img-circle" src="/static/assets/images/2016/05/05/testimonial03.jpg" alt=""></div>
+                                                      <div class="sppb-testimonial-client">
+                                                         <i class="kd kidzy-icon-testimonial"></i>
+                                                         <p class="pro-client-name">Rhoda Byrd</p>
+                                                      </div>
+                                                      <p class="pro-client-position">Parents</p>
+                                                      <div class="sppb-testimonial-message">“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.”</div>
+                                                   </div>
+                                                </div>
+                                                <ol class="sppb-carousel-indicators">
+                                                   <li data-sppb-target="#sppb-carousel-1525072346" class="active" data-sppb-slide-to="0"></li>
+                                                   <li data-sppb-target="#sppb-carousel-1525072346" data-sppb-slide-to="1"></li>
+                                                   <li data-sppb-target="#sppb-carousel-1525072346" data-sppb-slide-to="2"></li>
+                                                </ol>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section id="section-id-1525072347" class="sppb-section  spb-res-padding">
+                           <div class="sppb-row-container">
+                              <div class="sppb-section-title sppb-text-center">
+                                 <h2 class="sppb-title-heading">Latest Events</h2>
+                                 <p class="sppb-title-subheading">Starting with the new school year in our kindergarten</p>
+                              </div>
+                              <div class="sppb-row">
+                                 <div class="sppb-col-sm-12">
+                                    <div id="column-id-1525072348" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072349" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-module ">
+                                                <div class="sppb-addon-content">
+                                                   <div id="sp-kindergarten-events139" class="spkgarten	 sp-kindergarten-events-wrapper ">
+                                                      <div class="spkgarten-row">
+                                                         <div class="sp-kidzy-event spkgarten-col-xs-12 spkgarten-col-sm-6 spkgarten-col-md-3">
+                                                            <div class="events-img">
+                                                               <img src="/static/assets/images/demo/kidzy-events/events/1.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing.">
+                                                               <div class="sp-overlay">
+                                                                  <a href="SSMS/Class Routines/2-lorem-ipsum-dolor-sit-amet-consectetur-adipisicing.html" class="icon"><i class="spkgarten-icon-link"></i></a>
+                                                               </div>
+                                                            </div>
+                                                            <div class="event-description">
+                                                               <span class="event-date">
+                                                               <span>15</span>
+                                                               Jun </span>
+                                                               <h5 class="event-title"><a href="SSMS/Class Routines/2-lorem-ipsum-dolor-sit-amet-consectetur-adipisicing.html">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></h5>
+                                                               <ul class="event-info">
+                                                                  <li><span>Date: </span>15 Jun, 2016</li>
+                                                                  <li><span>Time: </span>
+                                                                     02:30 - 04:30 
+                                                                  </li>
+                                                                  <li>
+                                                                     <span class="event-location">Location: </span>Herbert Hoover Conference House San Diego, CA 
+                                                                  </li>
+                                                               </ul>
+                                                            </div>
+                                                         </div>
+                                                         <div class="sp-kidzy-event spkgarten-col-xs-12 spkgarten-col-sm-6 spkgarten-col-md-3">
+                                                            <div class="events-img">
+                                                               <img src="/static/assets/images/demo/kidzy-events/events/2.jpg" alt="There are many variations of passages of available">
+                                                               <div class="sp-overlay">
+                                                                  <a href="SSMS/events/3-there-are-many-variations-of-passages-of-available.html" class="icon"><i class="spkgarten-icon-link"></i></a>
+                                                               </div>
+                                                            </div>
+                                                            <div class="event-description">
+                                                               <span class="event-date">
+                                                               <span>17</span>
+                                                               Jun </span>
+                                                               <h5 class="event-title"><a href="SSMS/Class Routines/3-there-are-many-variations-of-passages-of-available.html">There are many variations of passages of available</a></h5>
+                                                               <ul class="event-info">
+                                                                  <li><span>Date: </span>17 Jun, 2016</li>
+                                                                  <li><span>Time: </span>
+                                                                     04:00 - 06:00 
+                                                                  </li>
+                                                                  <li>
+                                                                     <span class="event-location">Location: </span>Robert School San Diego, North house, DC 12000 
+                                                                  </li>
+                                                               </ul>
+                                                            </div>
+                                                         </div>
+                                                         <div class="sp-kidzy-event spkgarten-col-xs-12 spkgarten-col-sm-6 spkgarten-col-md-3">
+                                                            <div class="events-img">
+                                                               <img src="/static/assets/images/demo/kidzy-events/events/3.jpg" alt="Contrary to popular belief, Lorem Ipsum is not simply random text. ">
+                                                               <div class="sp-overlay">
+                                                                  <a href="SSMS/events/4-contrary-to-popular-belief-lorem-ipsum-is-not-simp.html" class="icon"><i class="spkgarten-icon-link"></i></a>
+                                                               </div>
+                                                            </div>
+                                                            <div class="event-description">
+                                                               <span class="event-date">
+                                                               <span>20</span>
+                                                               Jun </span>
+                                                               <h5 class="event-title"><a href="SSMS/Class Routines/4-contrary-to-popular-belief-lorem-ipsum-is-not-simp.html">Contrary to popular belief, Lorem Ipsum is not simply random text. </a></h5>
+                                                               <ul class="event-info">
+                                                                  <li><span>Date: </span>20 Jun, 2016</li>
+                                                                  <li><span>Time: </span>
+                                                                     05:00 - 06:30 
+                                                                  </li>
+                                                                  <li>
+                                                                     <span class="event-location">Location: </span>Herbert Hoover Conference House San Diego, CA 
+                                                                  </li>
+                                                               </ul>
+                                                            </div>
+                                                         </div>
+                                                         <div class="sp-kidzy-event spkgarten-col-xs-12 spkgarten-col-sm-6 spkgarten-col-md-3">
+                                                            <div class="events-img">
+                                                               <img src="/static/assets/images/demo/kidzy-events/events/3.jpg" alt="Contrary to popular belief, Lorem Ipsum is not simply random text. ">
+                                                               <div class="sp-overlay">
+                                                                  <a href="SSMS/events/4-contrary-to-popular-belief-lorem-ipsum-is-not-simp.html" class="icon"><i class="spkgarten-icon-link"></i></a>
+                                                               </div>
+                                                            </div>
+                                                            <div class="event-description">
+                                                               <span class="event-date">
+                                                               <span>20</span>
+                                                               Jun </span>
+                                                               <h5 class="event-title"><a href="SSMS/Class Routines/4-contrary-to-popular-belief-lorem-ipsum-is-not-simp.html">Contrary to popular belief, Lorem Ipsum is not simply random text. </a></h5>
+                                                               <ul class="event-info">
+                                                                  <li><span>Date: </span>20 Jun, 2016</li>
+                                                                  <li><span>Time: </span>
+                                                                     05:00 - 06:30 
+                                                                  </li>
+                                                                  <li>
+                                                                     <span class="event-location">Location: </span>Herbert Hoover Conference House San Diego, CA 
+                                                                  </li>
+                                                               </ul>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section id="section-id-1525072350" class="sppb-section  home1-bottom-cta">
+                           <div class="sppb-row-container">
+                              <div class="sppb-row">
+                                 <div class="sppb-col-sm-12 ">
+                                    <div id="column-id-1525072351" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072352" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-cta sp-kidzy-major-color">
+                                                <div class="sppb-row">
+                                                   <div class="sppb-col-sm-8">
+                                                      <h3 class="sppb-addon-title sppb-cta-title">Enrollment is now going on, please contact us.</h3>
+                                                   </div>
+                                                   <div class="sppb-col-sm-4 sppb-text-right"><a href="#" id="btn-1525072352" class="sppb-btn sppb-btn-primary sppb-btn-rounded">Enroll Now</a></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section id="section-id-1525072353" class="sppb-section  spb-res-padding">
+                           <div class="sppb-row-container">
+                              <div class="sppb-row">
+                                 <div class="sppb-col-sm-3">
+                                    <div id="column-id-1525072354" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072355" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                <div class="svg-overlay">
+                                                   <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                      <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                   </svg>
+                                                </div>
+                                                <div class="sppb-addon-content">
+                                                   <h4 class="sppb-addon-title sppb-feature-box-title">Class Sessions</h4>
+                                                   <div class="sppb-addon-text">Sat - Fri (8 am – 2 pm)<br />Sun - Mon (8 am – 11 am)</div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="sppb-col-sm-3">
+                                    <div id="column-id-1525072356" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072357" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                <div class="svg-overlay">
+                                                   <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                      <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                   </svg>
+                                                </div>
+                                                <div class="sppb-addon-content">
+                                                   <h4 class="sppb-addon-title sppb-feature-box-title">Kidzy Address</h4>
+                                                   <div class="sppb-addon-text">123 White Amphitheatre Kinway,<br />Mountain, CA 12345, USA</div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="sppb-col-sm-3">
+                                    <div id="column-id-1525072358" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072359" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                <div class="svg-overlay">
+                                                   <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                      <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                   </svg>
+                                                </div>
+                                                <div class="sppb-addon-content">
+                                                   <h4 class="sppb-addon-title sppb-feature-box-title">Office Hours</h4>
+                                                   <div class="sppb-addon-text">Monday – Friday<br />8.00 am – 5.00 pm</div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="sppb-col-sm-3">
+                                    <div id="column-id-1525072360" class="sppb-column">
+                                       <div class="sppb-column-addons">
+                                          <div id="sppb-addon-1525072361" class="clearfix">
+                                             <div class="sppb-addon sppb-addon-feature sppb-text-center ">
+                                                <div class="svg-overlay">
+                                                   <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                                                      <path d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                                                   </svg>
+                                                </div>
+                                                <div class="sppb-addon-content">
+                                                   <h4 class="sppb-addon-title sppb-feature-box-title">Phone & E-mail</h4>
+                                                   <div class="sppb-addon-text">+123 456 78910<br /><a href="http://demo.joomshaper.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3e5b504c5152527e55575a4447105d5153">[email&#160;protected]</a></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+{% endblock %}
