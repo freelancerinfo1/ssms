@@ -524,6 +524,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 80px;
 }
 .sppb-section-title {
   margin-bottom: 90px !important;
@@ -1078,12 +1079,12 @@ ul.social-icons >li {
   transition: .3s;
 }
 #sp-header .logo {
-  height: 76px;
-  display: table;
-  position: absolute;
-  z-index: 10;
-  top: -50px;
-  left: -50px;
+      height: 61px;
+    display: table;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
 }
 #sp-header .logo h1 {
   font-size: 24px;
@@ -1197,7 +1198,7 @@ ul.social-icons >li {
   min-height: 0;
 }
 .sp-page-title {
-  padding: 151px 0 42px 0;
+  padding: 226px 0 70px 0;
   text-align: center;
   background-size: cover !important;
 }
@@ -1458,8 +1459,8 @@ ul.social-icons >li {
   width: auto !important;
 }
 .sppb-slider-wrapper.varition-animation .slider-img img.slide-girl {
-  left: 40px;
-  top: -42px;
+  left: 78px;
+    top: 157px;
 }
 .sppb-slider-wrapper.varition-animation .slider-img .slide-circle {
   left: auto;

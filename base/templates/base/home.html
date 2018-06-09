@@ -39,15 +39,19 @@ body {
                                                 <div class="sppb-slider-item-wrapper">
                                                    <div id="slide-fullwidth" class="owl-carousel" data-sppb-slide-ride="true">
                                                       {% for banner in banners %}
-                                                      <div class="sppb-slideshow-fullwidth-item item">
+                                                       <div class="sppb-slideshow-fullwidth-item item">
                                                          <div class="sppb-slide-item-bg sppb-slideshow-fullwidth-item-bg">
                                                             <div class="container">
                                                                <div class="row">
-                                                                  <div class="col-sm-6"><div class="sppb-slideshow-fullwidth-item-text"><h1 class="sppb-fullwidth-title  sppb-wow fadeInLeftBig"> <small class="sppb-slidehsow-sub-title  sppb-wow fadeInLeftBig">{{ banner.caption }}</small>{{ banner.slide_text }}</h1><div class="sppb-fw-slider-button-wrapper  sppb-wow fadeInLeftBig" data-sppb-wow-delay="500ms"> <a target="_self" href="#" class="btn btn-primary"> <span>Admission Now</span></a></div></div></div>
-
-         <div class="col-sm-6">
-            <div class="slider-img"><img alt="" class="slide-circle" src="/static/assets/images/demo/slider/slide-circle.png"><img alt="" class="slide-cloud" src="/static/assets/images/demo/slider/slide-rain-cloud.png"><img alt="" class="slide-sun" src="/static/assets/images/demo/slider/slide-sun.png"><img alt="" class="slide-girl  sppb-wow zoomIn {% if banner.is_fadeinleft %}fadeInLeft {% endif %}" src="{{ banner.image.url }}" data-sppb-wow-duration="600ms" data-sppb-wow-delay="300ms"></div>
-         </div>
+                                                                  <div class="col-sm-6">
+                                                                     <div class="sppb-slideshow-fullwidth-item-text">
+                                                                        <h1 class="sppb-fullwidth-title  sppb-wow fadeInLeftBig"> <small class="sppb-slidehsow-sub-title  sppb-wow fadeInLeftBig">{{ banner.caption }}</small>{{ banner.slide_text }} </h1>
+                                                                        <div class="sppb-fw-slider-button-wrapper  sppb-wow fadeInLeftBig" data-sppb-wow-delay="500ms"> <a target="_self" href="#" class="btn btn-primary"> <span>Admission Now</span></a></div>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div class="col-sm-6">
+               <div class="slider-img"><img alt="" class="slide-cloud" src="/static/assets/images/demo/slider/slide-rain-cloud.png"><img alt="" class="slide-sun" src="/static/assets/images/demo/slider/slide-sun.png"><img alt="" class="slide-girl  sppb-wow zoomIn" src="{{ banner.image.url }}" data-sppb-wow-duration="600ms" data-sppb-wow-delay="300ms"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
                                                          </div>
