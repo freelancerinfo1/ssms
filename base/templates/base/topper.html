@@ -30,7 +30,7 @@
     {% for top in toppers_10 %}
     <div class="col-md-6" style="margin-bottom: 20px;">
       <div class="col-md-12" >
-         <div class="col-md-6" ><img src="{{ top.image.url }}" style="width: 255px;height: 255px;"></div>
+         <div class="col-md-6" >{% if top.imag %}<img src="{{ top.image.url }}" style="width: 255px;height: 255px;">{% endif %}</div>
           <div class="col-md-6" >
             <p>Name: {{ top.name }}</p>
             <p>Mark: {{ top.mark }} / 500</p>
