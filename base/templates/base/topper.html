@@ -22,7 +22,7 @@
          <br>
          <section id="sp-main-body">
             <div class="container">
-
+{% if toppers_10 %}
               <div class="container-fluid">
                 <h3>10 th toppers</h3>
   <div class="row">
@@ -41,7 +41,8 @@
     {% endfor %}
   </div>
 </div>
-
+{% endif %}
+{% if toppers_12 %}
               <div class="container-fluid">
                 <h3>12 th toppers</h3>
   <div class="row">
@@ -60,6 +61,7 @@
     {% endfor %}
   </div>
 </div>
+{% endif %}
                </div>
             </div>
 
