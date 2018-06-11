@@ -175,3 +175,14 @@ class GalleryDetailView(TemplateView):
 	def get(self,request,form_id):
 		gallery = Gallery.objects.get(pk=form_id)
 		return render(request, self.template_name,{"gallery":gallery})
+
+class AdmissionCriteria(TemplateView):
+	template_name = "base/admission_criteria.html"
+
+	def get(self,request):
+		return render(request, self.template_name,{})
+
+class History(TemplateView):
+	template_name = "base/history.html"
+	def get(self,request):
+		return render(request, self.template_name,{})

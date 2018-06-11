@@ -51,7 +51,7 @@
                               <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;">
                                  <div class="sp-dropdown-inner">
                                     <ul class="sp-dropdown-items">
-                                       <li class="sp-menu-item"><a href="SSM/courses.html">Admission Criteria</a></li>
+                                       <li class="sp-menu-item"><a href="{% url 'admission_criteria' %}">Admission Criteria</a></li>
                                        <li class="sp-menu-item"><a href="{% url 'teachers' %}">Path Finders</a></li>
                                        <li class="sp-menu-item"><a href="SSM/Class Routines.html">Class Routines</a></li>
                                        <li class="sp-menu-item"><a href="{% url 'orientation_program' %}">Orentation Program</a></li>
@@ -65,10 +65,10 @@
                               <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;">
                                  <div class="sp-dropdown-inner">
                                     <ul class="sp-dropdown-items">
-                                       <li class="sp-menu-item"><a href="About Us/about-us.html">Management</a></li>
-                                       <li class="sp-menu-item"><a href="About Us/contact-us.html">Contact Us</a></li>
+                                       <li class="sp-menu-item"><a href="{% url 'about_us' %}">Management</a></li>
+                                       <li class="sp-menu-item"><a href="{% url 'contact_us' %}">Contact Us</a></li>
                                        <li class="sp-menu-item"></li>
-                                       <li class="sp-menu-item"><a href="SSM/teachers/3-fanny-greer.html">History</a></li>
+                                       <li class="sp-menu-item"><a href="{% url 'history' %}">History</a></li>
                                        <li class="sp-menu-item"></li>
                                        <li class="sp-menu-item"></li>
                                     </ul>

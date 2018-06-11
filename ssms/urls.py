@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.views.static import serve
-from .views import CoursesView,TeachersView,ClassRoutinesView,AboutUsView,ContactUsView,NewsAndEventsView,GalleryView,VideosView, NewsAndEventsDetailView, TopperView, SportsView, SportsDetailView, CoCarricularView, CoCarricularDetailView,ExtraCurricularView,ExtraCurricularDetailView,FacilitieView,FacilitieDetailView,SmartClassView, SmartClassDetailView, LifeAtSchoolView, LifeAtSchoolDetailView,OrientationProgramView, OrientationProgramDetailView,GalleryView, GalleryDetailView
+from .views import CoursesView,TeachersView,ClassRoutinesView,AboutUsView,ContactUsView,NewsAndEventsView,GalleryView,VideosView, NewsAndEventsDetailView, TopperView, SportsView, SportsDetailView, CoCarricularView, CoCarricularDetailView,ExtraCurricularView,ExtraCurricularDetailView,FacilitieView,FacilitieDetailView,SmartClassView, SmartClassDetailView, LifeAtSchoolView, LifeAtSchoolDetailView,OrientationProgramView, OrientationProgramDetailView,GalleryView, GalleryDetailView, AdmissionCriteria, History
 
 admin.autodiscover()
 
@@ -55,6 +55,12 @@ urlpatterns = patterns('',
 
         url(r'^gallery/$', GalleryView.as_view(), name='gallery'),
         url(r'^gallery/(?P<form_id>\d+)/$', GalleryDetailView.as_view(), name='gallery_detail'),
+        url(r'^admission-criteria/$', AdmissionCriteria.as_view(), name='admission_criteria'),
+        url(r'^history/$', History.as_view(), name='history'),
+
+        
+
+
 
         
 

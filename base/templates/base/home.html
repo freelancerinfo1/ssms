@@ -11,7 +11,7 @@ body {
 </style>
 {% endblock css %}
 
-{% block page_title %}Your Site - Home{% endblock %}
+{% block page_title %}SS MATRIC - Home{% endblock %}
 {% block page_class %}home-page{% endblock %}
 {% block content %}
 <section id="sp-page-title">
@@ -291,15 +291,9 @@ If your plan is for a lifetime, educate Children”
                                              <div class="sppb-addon sppb-addon-persion sppb-text-center ">
                                                 <div class="sppb-addon-content">
                                                    <div class="sppb-person-image">
+                                                      {% if tec.image %}
                                                       <img class="sppb-img-responsive" src="{{ tec.image.url }}" alt="{{ tec.name }}">
-                                                      <div class="sppb-person-social-icons">
-                                                         <ul class="sppb-person-social">
-                                                            <li><a target="_blank" href="http://www.facebook.com/joomshaper"><i class="fa fa-facebook"></i></a></li>
-                                                            <li><a target="_blank" href="http://twitter.com/joomshaper"><i class="fa fa-twitter"></i></a></li>
-                                                            <li><a target="_blank" href="http://plus.google.com/+Joomshapers"><i class="fa fa-google-plus"></i></a></li>
-                                                            <li><a target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>
-                                                         </ul>
-                                                      </div>
+                                                      {% endif %}
                                                    </div>
                                                    <div class="sppb-person-information"><span class="sppb-person-name">{{ tec.name }}</span><span class="sppb-person-designation">{{ tec.position }}</span></div>
                                                 </div>
@@ -321,16 +315,19 @@ If your plan is for a lifetime, educate Children”
                                           <div id="sppb-addon-1525072346" class="clearfix">
                                              <div id="sppb-testimonial-pro-1525072346" class="sppb-carousel sppb-testimonial-pro sppb-slide sppb-text-center" data-sppb-ride="sppb-carousel">
                                                 <div class="sppb-carousel-inner">
-                                                   <div class="sppb-item  active">
-                                                      <div class="sppb-testimonial-img"><img class="sppb-img-responsive sppb-avatar sppb-img-circle" src="/static/assets/images/2016/05/05/testimonial01.jpg" alt=""></div>
+                                                   {% for feedback in parent_feedbacks%}
+                                                   <div class="sppb-item">
+                                                      <div class="sppb-testimonial-img">
+                                                         {% if feedback.image %}<img class="sppb-img-responsive sppb-avatar sppb-img-circle" src="{{ feedback.image.url }}" alt="">{% endif %}</div>
                                                       <div class="sppb-testimonial-client">
                                                          <i class="kd kidzy-icon-testimonial"></i>
-                                                         <p class="pro-client-name">Jaklin Nowkin</p>
+                                                         <p class="pro-client-name">{{ feedback.name }}</p>
                                                       </div>
                                                       <p class="pro-client-position">Parents</p>
-                                                      <div class="sppb-testimonial-message">“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.”</div>
+                                                      <div class="sppb-testimonial-message">{{ feedback.comments}}</div>
                                                    </div>
-                                                   <div class="sppb-item ">
+                                                   {% endfor %}
+                                                  <!--  <div class="sppb-item ">
                                                       <div class="sppb-testimonial-img"><img class="sppb-img-responsive sppb-avatar sppb-img-circle" src="/static/assets/images/2016/05/05/testimonial02.jpg" alt=""></div>
                                                       <div class="sppb-testimonial-client">
                                                          <i class="kd kidzy-icon-testimonial"></i>
@@ -347,7 +344,7 @@ If your plan is for a lifetime, educate Children”
                                                       </div>
                                                       <p class="pro-client-position">Parents</p>
                                                       <div class="sppb-testimonial-message">“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.”</div>
-                                                   </div>
+                                                   </div> -->
                                                 </div>
                                                 <ol class="sppb-carousel-indicators">
                                                    <li data-sppb-target="#sppb-carousel-1525072346" class="active" data-sppb-slide-to="0"></li>

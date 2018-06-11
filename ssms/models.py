@@ -160,3 +160,9 @@ class Gallery(models.Model):
 class GalleryImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='gallery',content_types=['image/jpeg', 'image/png'],verbose_name='gallery')
 	gallery = models.ForeignKey(Gallery,null=True,blank=True,related_name='gallery_images')
+ 
+
+class ParentFeedback(models.Model):
+	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='parent',content_types=['image/jpeg', 'image/png'],verbose_name='parent')
+	name = models.CharField(max_length=100)
+	comments = models.TextField(max_length=600, null=True, blank=True)
