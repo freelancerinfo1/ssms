@@ -1,9 +1,50 @@
 {% extends "_layouts/base.html" %}
-
-
-
+{% load thumbnail %}
 {% block page_title %}Your Site - Home{% endblock %}
 {% block page_class %}home-page{% endblock %}
 {% block content %}
-<h1>ABOUT ussssssssssssss.</h1>
+<section id="sp-page-title">
+            <div class="row">
+               <div id="sp-title" class="col-sm-12 col-md-12">
+                  <div class="sp-column ">
+                     <div class="sp-page-title" style="background-image: url(/static/assets/images/demo/subheader.png);">
+                        <div class="container">
+                           <h2>Admission Criteria</h2>
+                          
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <br>
+         <br>
+         <section id="sp-main-body">
+            <div class="container">
+               <div class="row">
+                  <div id="sp-component" class="col-sm-12 col-md-12">
+                     <div class="sp-column ">
+                        <div id="system-message-container"></div>
+                        <div id="akeeba-renderjoomla">
+                           <div id="com-spkgarten" class="spkgarten spkgarten-view-events">
+                              <div id="sp-classes" class="sp-classes">
+                                 <div class="spkgarten-row">
+                                    {% for ad in admissioncriterias%}
+                                    <div class="sp-kidzy-event spkgarten-col-sm-12">
+                                    	<p>{{ ad.detail|linebreaks }}</p>
+                                    </div>
+                                    {% endfor %}
+                                   
+                                 </div>
+                                 
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            </div>
+      </section>
 {% endblock %}

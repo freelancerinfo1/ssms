@@ -5,7 +5,7 @@ from django.views.generic.base import TemplateView
 # from anabond.forms import ControlPlanForm
 # from anabond.models import ControlPlan, ControlPlanProperty, ControlPlanPropertyItem
 from datetime import datetime
-from .models import Teachers,NewsAndEvents,NewsAndEventImages, Toppers, Sports, CoCarricular, ExtraCurricular, Facilitie, SmartClass, LifeAtSchool, OrientationProgram, Gallery
+from .models import Teachers,NewsAndEvents,NewsAndEventImages, Toppers, Sports, CoCarricular, ExtraCurricular, Facilitie, SmartClass, LifeAtSchool, OrientationProgram, Gallery, AdmissionCriterias, ClassRoutine, Award
 
 class CoursesView(TemplateView):
 	template_name = "base/courses.html"
@@ -180,9 +180,37 @@ class AdmissionCriteria(TemplateView):
 	template_name = "base/admission_criteria.html"
 
 	def get(self,request):
-		return render(request, self.template_name,{})
+		admissioncriterias = AdmissionCriterias.objects.filter()
+		return render(request, self.template_name,{"admissioncriterias":admissioncriterias})
 
 class History(TemplateView):
 	template_name = "base/history.html"
 	def get(self,request):
 		return render(request, self.template_name,{})
+
+
+class ClassRoutineView(TemplateView):
+	template_name = "base/class_routine.html"
+
+	def get(self,request):
+		class_routines = ClassRoutine.objects.filter()
+		return render(request, self.template_name,{"class_routines":class_routines})
+class ClassRoutineDetailView(TemplateView):
+	template_name = "base/class_routine_detail.html"
+
+	def get(self,request,form_id):
+		class_routine = ClassRoutine.objects.get(pk=form_id)
+		return render(request, self.template_name,{"class_routine":class_routine})
+
+class AwardView(TemplateView):
+	template_name = "base/award.html"
+
+	def get(self,request):
+		awards = Award.objects.filter()
+		return render(request, self.template_name,{"awards":awards})
+class AwardDetailView(TemplateView):
+	template_name = "base/award_detail.html"
+
+	def get(self,request,form_id):
+		award = Award.objects.get(pk=form_id)
+		return render(request, self.template_name,{"award":award})

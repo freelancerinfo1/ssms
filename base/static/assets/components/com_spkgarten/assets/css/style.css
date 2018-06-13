@@ -671,7 +671,7 @@ ul.course-info{
     overflow: hidden;
     border-radius: 4px;
 }
-.teacher-img:after,
+/*.teacher-img:after,
 .spkgarten-person .spkgarten-person-details .spkgarten-person-img:after {
     position: absolute;
     content: "";
@@ -684,7 +684,7 @@ ul.course-info{
     transform: skew(0) scaleX(0);
     -webkit-transition: .3s;
     transition: .3s;
-}
+}*/
 .teacher-img:hover:after,
 .spkgarten-person .spkgarten-person-details:hover .spkgarten-person-img:after{
     -webkit-transform: skew(0) scaleX(1);

@@ -1,0 +1,73 @@
+{% extends "_layouts/base.html" %}
+
+
+
+{% block page_title %}Your Site - Home{% endblock %}
+{% block page_class %}home-page{% endblock %}
+{% block content %}
+<section id="sp-page-title">
+            <div class="row">
+               <div id="sp-title" class="col-sm-12 col-md-12">
+                  <div class="sp-column ">
+                     <div class="sp-page-title" style="background-image: url(/static/assets/images/demo/subheader.png);">
+                        <div class="container">
+                           <h2>Award</h2>
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <br>
+         <br>
+         <section id="sp-main-body">
+            <div class="container">
+               <div class="row">
+                  <div id="sp-component" class="col-sm-12 col-md-12">
+                     <div class="sp-column ">
+                        <div id="system-message-container"></div>
+                        <div id="akeeba-renderjoomla">
+                           <div id="com-spkgarten" class="spkgarten spkgarten-view-events">
+                              <div id="sp-classes" class="sp-classes">
+                                 <div class="spkgarten-row">
+                                    {% for aw in awards %}
+                                    <div class="sp-kidzy-event spkgarten-col-sm-6">
+                                       <div class="events-img">
+                                           {% for img in aw.award_images.all %}
+                                          {% if forloop.first %}
+                                             <img src="{{ img.image.url }}" >
+                                          {% endif %}
+                                          {% endfor %}
+                                          <div class="sp-overlay">
+                                             <a href="events/2-lorem-ipsum-dolor-sit-amet-consectetur-adipisicing.html" class="icon"><i class="spkgarten-icon-link"></i></a>
+                                          </div>
+                                       </div>
+                                       <div class="event-description">
+                                          <h3 class="event-title"><a href="{% url 'award_detail' aw.id %}">{{ aw.title }}</a></h3>
+                                          <ul class="event-info">
+                                             <li><span class="title"></span></li>
+                                             <li>
+                                                <p class="event-location"><span class="title"></span></p>
+                                             </li>
+                                          </ul>
+                                          <div class="details">
+                                             <p class="list-page-detail">{{ aw.comments }}</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    {% endfor %}
+                                   
+                                 </div>
+                                 
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            </div>
+      </section>
+{% endblock %}

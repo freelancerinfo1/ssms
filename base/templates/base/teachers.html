@@ -36,38 +36,15 @@
                               <div class="spkgarten-person spkgarten-col-sm-3 spkgarten-col-md-3">
                                  <div class="spkgarten-person-details">
                                     <div class="spkgarten-person-img">
-                                       <img src="{{ tec.image.url }}" class="spkgarten-person-img spkgarten-img-responsive" alt="{{ tec.name }}">
-                                       <ul class="spkgarten-person-social">
-                                          <li>
-                                             <a href="http://facebook.com/#" target="_blank" class="facebook">
-                                             <i class="fa fa-facebook"></i>
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a href="http://linkedin.com/#" target="_blank" class="linkedin">
-                                             <i class="fa fa-linkedin"></i>
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a href="http://twitter.com/#" target="_blank" class="twitter">
-                                             <i class="fa fa-twitter"></i>
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a href="https://plus.google.com/#" target="_blank" class="gplus">
-                                             <i class="fa fa-google-plus"></i>
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a href="#" target="_blank" class="website">
-                                             <i class="fa fa-globe"></i>
-                                             </a>
-                                          </li>
-                                       </ul>
+                                       {% if tec.image %}
+
+                                       <img src="{{ tec.image.url }}" class="spkgarten-person-img " alt="{{ tec.name }}">
+                                       {% endif %}
+                                      
                                     </div>
                                     <div class="spkgarten-person-info">
-                                       <a class="spkgarten-person-title" href="teachers/2-rhoda-byrd.html">
-                                       {{ tec.name }}</a>
+                                       
+                                       {{ tec.name }}
                                     </div>
                                     <p class="spkgarten-person-designation">
                                        {{ tec.position }} 

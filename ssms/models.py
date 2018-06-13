@@ -58,6 +58,8 @@ class Teachers(models.Model):
 class NewsAndEvents(models.Model):
 	title = models.CharField(max_length=100)
 	comments = models.TextField(max_length=600, null=True, blank=True)
+	date = models.DateField(null=True, blank=True)
+
 	def __str__(self):
 		return self.title
 
@@ -166,3 +168,25 @@ class ParentFeedback(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='parent',content_types=['image/jpeg', 'image/png'],verbose_name='parent')
 	name = models.CharField(max_length=100)
 	comments = models.TextField(max_length=600, null=True, blank=True)
+class AdmissionCriterias(models.Model):
+	detail = models.TextField(max_length=5000, null=True, blank=True)
+class ClassRoutine(models.Model):
+	title = models.CharField(max_length=100)
+	comments = models.TextField(max_length=600, null=True, blank=True)
+	def __str__(self):
+		return self.title
+
+class ClassRoutineImages(models.Model):
+	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='classroutine',content_types=['image/jpeg', 'image/png'],verbose_name='classroutine')
+	classroutine = models.ForeignKey(ClassRoutine,null=True,blank=True,related_name='classroutine_images')
+
+
+class Award(models.Model):
+	title = models.CharField(max_length=100)
+	comments = models.TextField(max_length=600, null=True, blank=True)
+	def __str__(self):
+		return self.title
+
+class AwardImages(models.Model):
+	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='award',content_types=['image/jpeg', 'image/png'],verbose_name='award')
+	award = models.ForeignKey(Award,null=True,blank=True,related_name='award_images')
