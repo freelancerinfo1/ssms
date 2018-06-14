@@ -186,7 +186,7 @@ class AdmissionCriteria(TemplateView):
 class HistoryView(TemplateView):
 	template_name = "base/history.html"
 	def get(self,request):
-		historys = History.objects.filter().order_by('date')
+		historys = History.objects.filter().order_by('-date')
 		return render(request, self.template_name,{"historys":historys})
 
 
