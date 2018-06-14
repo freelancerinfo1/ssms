@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.views.static import serve
-from .views import CoursesView,TeachersView,ClassRoutinesView,AboutUsView,ContactUsView,NewsAndEventsView,GalleryView,VideosView, NewsAndEventsDetailView, TopperView, SportsView, SportsDetailView, CoCarricularView, CoCarricularDetailView,ExtraCurricularView,ExtraCurricularDetailView,FacilitieView,FacilitieDetailView,SmartClassView, SmartClassDetailView, LifeAtSchoolView, LifeAtSchoolDetailView,OrientationProgramView, OrientationProgramDetailView,GalleryView, GalleryDetailView, AdmissionCriteria, History, ClassRoutineView,ClassRoutineDetailView,AwardView ,AwardDetailView
+from .views import CoursesView,TeachersView,ClassRoutinesView,AboutUsView,ContactUsView,NewsAndEventsView,GalleryView,VideosView, NewsAndEventsDetailView, TopperView, SportsView, SportsDetailView, CoCarricularView, CoCarricularDetailView,ExtraCurricularView,ExtraCurricularDetailView,FacilitieView,FacilitieDetailView,SmartClassView, SmartClassDetailView, LifeAtSchoolView, LifeAtSchoolDetailView,OrientationProgramView, OrientationProgramDetailView,GalleryView, GalleryDetailView, AdmissionCriteria, HistoryView, ClassRoutineView,ClassRoutineDetailView,AwardView ,AwardDetailView
 
 admin.autodiscover()
 
@@ -56,7 +56,7 @@ urlpatterns = patterns('',
         url(r'^gallery/$', GalleryView.as_view(), name='gallery'),
         url(r'^gallery/(?P<form_id>\d+)/$', GalleryDetailView.as_view(), name='gallery_detail'),
         url(r'^admission-criteria/$', AdmissionCriteria.as_view(), name='admission_criteria'),
-        url(r'^history/$', History.as_view(), name='history'),
+        url(r'^history/$', HistoryView.as_view(), name='history'),
 
         url(r'^class-routine/$', ClassRoutineView.as_view(), name='class_routine'),
         url(r'^class-routine/(?P<form_id>\d+)/$', ClassRoutineDetailView.as_view(), name='class_routine_detail'),

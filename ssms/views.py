@@ -5,7 +5,7 @@ from django.views.generic.base import TemplateView
 # from anabond.forms import ControlPlanForm
 # from anabond.models import ControlPlan, ControlPlanProperty, ControlPlanPropertyItem
 from datetime import datetime
-from .models import Teachers,NewsAndEvents,NewsAndEventImages, Toppers, Sports, CoCarricular, ExtraCurricular, Facilitie, SmartClass, LifeAtSchool, OrientationProgram, Gallery, AdmissionCriterias, ClassRoutine, Award
+from .models import Teachers,NewsAndEvents,NewsAndEventImages, Toppers, Sports, CoCarricular, ExtraCurricular, Facilitie, SmartClass, LifeAtSchool, OrientationProgram, Gallery, AdmissionCriterias, ClassRoutine, Award, History
 
 class CoursesView(TemplateView):
 	template_name = "base/courses.html"
@@ -183,10 +183,11 @@ class AdmissionCriteria(TemplateView):
 		admissioncriterias = AdmissionCriterias.objects.filter()
 		return render(request, self.template_name,{"admissioncriterias":admissioncriterias})
 
-class History(TemplateView):
+class HistoryView(TemplateView):
 	template_name = "base/history.html"
 	def get(self,request):
-		return render(request, self.template_name,{})
+		historys = History.objects.filter().order_by('date')
+		return render(request, self.template_name,{"historys":historys})
 
 
 class ClassRoutineView(TemplateView):

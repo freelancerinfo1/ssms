@@ -190,3 +190,8 @@ class Award(models.Model):
 class AwardImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='award',content_types=['image/jpeg', 'image/png'],verbose_name='award')
 	award = models.ForeignKey(Award,null=True,blank=True,related_name='award_images')
+
+class History(models.Model):
+	date = models.DateField()
+	title = models.CharField(max_length=200)
+	comments = models.TextField()

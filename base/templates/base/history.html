@@ -28,90 +28,38 @@
                                  <div class="spkgarten-container">
                                     <div class="spkgarten-teacher-details">
                                        <div id="teacher-timeline">
-                                          <div class="spkgarten-row timeline-movement odd">
-                                             <div class="timeline-badge"> </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <p class="timeline-date text-right">08 Feb 2014</p>
-                                             </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <div class="timeline-panel">
-                                                   <p class="title">Senior Assistant Teacher</p>
-                                                   <p class="details">Kidzy Kindergarten School</p>
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="spkgarten-row timeline-movement even">
-                                             <div class="timeline-badge"> </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <div class="timeline-panel left-part">
-                                                   <p class="title">Assistant Teacher</p>
-                                                   <p class="details">Kidzy Kindergarten School</p>
-                                                </div>
-                                             </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <p class="timeline-date text-left">12 May 2014</p>
-                                             </div>
-                                          </div>
-                                          <div class="spkgarten-row timeline-movement odd">
-                                             <div class="timeline-badge"> </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <p class="timeline-date text-right">08 Feb 2013</p>
-                                             </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <div class="timeline-panel">
-                                                   <p class="title">Join Kidzy School</p>
-                                                   <p class="details">Kidzy Kindergarten School</p>
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="spkgarten-row timeline-movement even">
-                                             <div class="timeline-badge"> </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <div class="timeline-panel left-part">
-                                                   <p class="title">Online Study Support</p>
-                                                   <p class="details">Al punto natura design</p>
-                                                </div>
-                                             </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <p class="timeline-date text-left">2 May 2012</p>
-                                             </div>
-                                          </div>
-                                          <div class="spkgarten-row timeline-movement odd">
-                                             <div class="timeline-badge"> </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <p class="timeline-date text-right">08 Feb 2012</p>
-                                             </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <div class="timeline-panel">
-                                                   <p class="title">Teacher</p>
-                                                   <p class="details">Maple leaf School & College</p>
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="spkgarten-row timeline-movement even">
-                                             <div class="timeline-badge"> </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <div class="timeline-panel left-part">
-                                                   <p class="title">KBC Teachers Training School</p>
-                                                   <p class="details">Technopassage</p>
-                                                </div>
-                                             </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <p class="timeline-date text-left">12 May 2011</p>
-                                             </div>
-                                          </div>
-                                          <div class="spkgarten-row timeline-movement odd">
-                                             <div class="timeline-badge"> </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <p class="timeline-date text-right">08 Feb 2010</p>
-                                             </div>
-                                             <div class="spkgarten-col-xs-6  timeline-item">
-                                                <div class="timeline-panel">
-                                                   <p class="title">Faculty of Arts and Design, Belgrade</p>
-                                                   <p class="details">Bachelor, Graphics Design</p>
-                                                </div>
-                                             </div>
-                                          </div>
+
+{% for history in historys %}
+<div class="spkgarten-row timeline-movement {% if forloop.counter|divisibleby:2 %} even{% else %} odd{% endif %}">
+   <div class="timeline-badge"> </div>
+   {% if forloop.counter|divisibleby:2 %} 
+   <div class="spkgarten-col-xs-6  timeline-item">
+      <div class="timeline-panel left-part">
+         <p class="title">{{ history.title }}</p>
+         <p class="details">{{ history.comments }}</p>
+      </div>
+   </div>
+   <div class="spkgarten-col-xs-6  timeline-item">
+      <p class="timeline-date text-left">{{ history.date }}</p>
+   </div>
+   {% else %} 
+<div class="spkgarten-col-xs-6  timeline-item">
+      <p class="timeline-date text-right">{{ history.date }}</p>
+   </div>
+   <div class="spkgarten-col-xs-6  timeline-item">
+      <div class="timeline-panel">
+         <p class="title">{{ history.title }}</p>
+         <p class="details">{{ history.comments }}</p>
+      </div>
+   </div>
+   {% endif %}
+
+   
+</div>
+{% endfor %}
+
+
+
                                        </div>
                                     </div>
                                  </div>
