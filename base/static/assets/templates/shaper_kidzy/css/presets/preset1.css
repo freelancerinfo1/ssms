@@ -36,7 +36,7 @@ ul.social-icons >li a:hover {
   color: #92278f;
 }
 .sp-page-title {
-  background: #92278f;
+  background: #2ab0ba;
 }
 .layout-boxed .body-innerwrapper {
   background: #ffffff;
@@ -221,7 +221,7 @@ ul.sppb-gallery li a:before,
 .sppb-slider-wrapper.sppb-slider-fullwidth-wrapper .owl-theme .owl-dots .owl-dot.active span,
 .sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a,
 #sp-bottom:after {
-  background: #92278f;
+  background: #2ab0ba;
 }
 .sppb-addon-persion .sppb-person-image:after {
   background: rgba(146,39,143,0.8) none repeat scroll 0 0;

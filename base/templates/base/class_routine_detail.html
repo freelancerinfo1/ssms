@@ -51,7 +51,9 @@
              </div>
              {% else %}
              {% for img in class_routine.classroutine_images.all%}
-             <img src="{{ img.image.url }}" style="width: 100% !important;">
+             {% thumbnail img.image "1040x730" crop="center" as im %}
+                      <img src="{{ im.url }}" style="width: 100% !important;">
+                      {% endthumbnail %}
              {% endfor %}
              {% endif %}
                                        </div>
