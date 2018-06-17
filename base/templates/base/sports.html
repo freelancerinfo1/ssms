@@ -1,7 +1,5 @@
 {% extends "_layouts/base.html" %}
-
-
-
+{% load thumbnail %}
 {% block page_title %}SS MATRIC - Sport{% endblock %}
 {% block page_class %}home-page{% endblock %}
 {% block content %}
@@ -35,8 +33,11 @@
                                     <div class="sp-kidzy-event spkgarten-col-sm-6">
                                        <div class="events-img">
                                            {% for img in sport.sports_images.all %}
+
                                           {% if forloop.first %}
-                                             <img src="{{ img.image.url }}" >
+                                          {% thumbnail img.image "555x369" crop="center" as im %}
+                                             <img src="{{ im.url }}" >
+                                             {% endthumbnail %}
                                           {% endif %}
                                           {% endfor %}
                                           <div class="sp-overlay">
