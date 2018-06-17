@@ -34,21 +34,20 @@
                                        <h2>{{ sport.title }}</h2>
                                        {% if sport.sports_images.all.count > 1 %}
                                         <div class="owl-carousel owl-theme slider1">
-                                          {% for img in sport.sports_images.all %}
-                                          <img src="{{ img.image.url }}" style="width: 100% !important;">
-                                          <div class="product-content"> 
-                                            <div class="product-image">
-                                               {% thumbnail img.image "1040x730" crop="center" as im %}
+                                          {% for img in sport.sports_images.all%}
+                <div class="product-content"> 
+                  <div class="product-image">
+                      {% thumbnail img.image "1040x730" crop="center" as im %}
                       <img src="{{ im.url }}">
                       {% endthumbnail %}
-                                            </div>
-                                          </div>
-                                          {% endfor %}
+                  </div>
+                </div>
+                {% endfor %}
              </div>
              {% else %}
-             {% for img in sport.sports_images.all %}
+             {% for img in sport.sports_images.all%}
              {% thumbnail img.image "1040x730" crop="center" as im %}
-                      <img src="{{ im.url }}">
+                      <img src="{{ im.url }}" style="width: 100% !important;">
                       {% endthumbnail %}
              {% endfor %}
              {% endif %}

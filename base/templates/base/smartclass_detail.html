@@ -38,17 +38,16 @@
                 <div class="product-content"> 
                   <div class="product-image">
                       {% thumbnail img.image "1040x730" crop="center" as im %}
-                      <img src="{{ im.url }}" class="testttttt">
+                      <img src="{{ im.url }}">
                       {% endthumbnail %}
                   </div>
-                 
                 </div>
                 {% endfor %}
              </div>
              {% else %}
-             {% for img in smartclass.smartclass_images.all %}
+             {% for img in smartclass.smartclass_images.all%}
              {% thumbnail img.image "1040x730" crop="center" as im %}
-                      <img src="{{ im.url }}">
+                      <img src="{{ im.url }}" style="width: 100% !important;">
                       {% endthumbnail %}
              {% endfor %}
              {% endif %}

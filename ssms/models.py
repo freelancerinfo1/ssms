@@ -67,6 +67,8 @@ class NewsAndEventImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='news_and_events',content_types=['image/jpeg', 'image/png'],verbose_name='News And Events')
 	news_and_events = models.ForeignKey(NewsAndEvents,null=True,blank=True,related_name='news_and_event_images')
 
+	def __str__(self):
+		return self.news_and_events.title
 class Toppers(models.Model):
 	STD = (
 		('10', '10'),
@@ -90,7 +92,8 @@ class Sports(models.Model):
 class SportsImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='sports',content_types=['image/jpeg', 'image/png'],verbose_name='Sports')
 	sports = models.ForeignKey(Sports,null=True,blank=True,related_name='sports_images')
-
+	def __str__(self):
+		return self.sports.title
 
 class CoCarricular(models.Model):
 	title = models.CharField(max_length=100)
@@ -101,7 +104,8 @@ class CoCarricular(models.Model):
 class CoCarricularImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='cocarricular',content_types=['image/jpeg', 'image/png'],verbose_name='CoCarricular')
 	cocarricular = models.ForeignKey(CoCarricular,null=True,blank=True,related_name='cocarricular_images')
-
+	def __str__(self):
+		return self.cocarricular.title
 
 
 class ExtraCurricular(models.Model):
@@ -113,7 +117,8 @@ class ExtraCurricular(models.Model):
 class ExtraCurricularImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='extracurricular',content_types=['image/jpeg', 'image/png'],verbose_name='ExtraCurricular')
 	extracurricular = models.ForeignKey(ExtraCurricular,null=True,blank=True,related_name='extracurricular_images')
-
+	def __str__(self):
+		return self.extracurricular.title
 class Facilitie(models.Model):
 	title = models.CharField(max_length=100)
 	comments = models.TextField(max_length=600, null=True, blank=True)
@@ -123,7 +128,8 @@ class Facilitie(models.Model):
 class FacilitieImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='facilitie',content_types=['image/jpeg', 'image/png'],verbose_name='facilitie')
 	facilitie = models.ForeignKey(Facilitie,null=True,blank=True,related_name='facilitie_images')
-
+	def __str__(self):
+		return self.facilitie.title
 class SmartClass(models.Model):
 	title = models.CharField(max_length=100)
 	comments = models.TextField(max_length=600, null=True, blank=True)
@@ -133,6 +139,8 @@ class SmartClass(models.Model):
 class SmartClassImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='smartclass',content_types=['image/jpeg', 'image/png'],verbose_name='smartclass')
 	smartclass = models.ForeignKey(SmartClass,null=True,blank=True,related_name='smartclass_images')
+	def __str__(self):
+		return self.smartclass.title
 class LifeAtSchool(models.Model):
 	title = models.CharField(max_length=100)
 	comments = models.TextField(max_length=600, null=True, blank=True)
@@ -142,7 +150,8 @@ class LifeAtSchool(models.Model):
 class LifeAtSchoolImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='life_at_school',content_types=['image/jpeg', 'image/png'],verbose_name='life_at_school')
 	life_at_school = models.ForeignKey(LifeAtSchool,null=True,blank=True,related_name='life_at_school_images')
-
+	def __str__(self):
+		return self.life_at_school.title
 class OrientationProgram(models.Model):
 	title = models.CharField(max_length=100)
 	comments = models.TextField(max_length=600, null=True, blank=True)
@@ -152,7 +161,8 @@ class OrientationProgram(models.Model):
 class OrientationProgramImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='orientation_program',content_types=['image/jpeg', 'image/png'],verbose_name='orientation_program')
 	orientation_program = models.ForeignKey(OrientationProgram,null=True,blank=True,related_name='orientation_program_images')
-
+	def __str__(self):
+		return self.orientation_program.title
 class Gallery(models.Model):
 	title = models.CharField(max_length=100)
 	comments = models.TextField(max_length=600, null=True, blank=True)
@@ -162,7 +172,8 @@ class Gallery(models.Model):
 class GalleryImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='gallery',content_types=['image/jpeg', 'image/png'],verbose_name='gallery')
 	gallery = models.ForeignKey(Gallery,null=True,blank=True,related_name='gallery_images')
- 
+	def __str__(self):
+		return self.gallery.title
 
 class ParentFeedback(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='parent',content_types=['image/jpeg', 'image/png'],verbose_name='parent')
@@ -180,7 +191,8 @@ class ClassRoutineImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='classroutine',content_types=['image/jpeg', 'image/png'],verbose_name='classroutine')
 	classroutine = models.ForeignKey(ClassRoutine,null=True,blank=True,related_name='classroutine_images')
 
-
+	def __str__(self):
+		return self.classroutine.title
 class Award(models.Model):
 	title = models.CharField(max_length=100)
 	comments = models.TextField(max_length=600, null=True, blank=True)
@@ -190,7 +202,8 @@ class Award(models.Model):
 class AwardImages(models.Model):
 	image = ContentTypeRestrictedFileField(null=True, blank=True, default='',max_length=200, upload_to='award',content_types=['image/jpeg', 'image/png'],verbose_name='award')
 	award = models.ForeignKey(Award,null=True,blank=True,related_name='award_images')
-
+	def __str__(self):
+		return self.award.title
 class History(models.Model):
 	date = models.DateField()
 	title = models.CharField(max_length=200)

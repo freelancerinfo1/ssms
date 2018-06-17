@@ -33,22 +33,25 @@
                                     <div class="sp-kidzy-event spkgarten-col-sm-12">
                                        <h2>{{ life_at_school.title }}</h2>
 
+                                        {% if life_at_school.life_at_school_images.all.count > 1 %}
                                         <div class="owl-carousel owl-theme slider1">
                                           {% for img in life_at_school.life_at_school_images.all%}
                 <div class="product-content"> 
                   <div class="product-image">
-                    {% thumbnail img.image "1040x730" crop="center" as im %}
+                      {% thumbnail img.image "1040x730" crop="center" as im %}
                       <img src="{{ im.url }}">
                       {% endthumbnail %}
                   </div>
-                 <!--  <div class="product-top">
-                    <h4 class="product-title">
-                      <a href="#">Lorum Ipsum</a>
-                    </h4> 
-                  </div>  --> 
                 </div>
                 {% endfor %}
              </div>
+             {% else %}
+             {% for img in life_at_school.life_at_school_images.all%}
+             {% thumbnail img.image "1040x730" crop="center" as im %}
+                      <img src="{{ im.url }}" style="width: 100% !important;">
+                      {% endthumbnail %}
+             {% endfor %}
+             {% endif %}
                                        </div>
                                        <div class="event-description">
                                           <div class="details">

@@ -33,6 +33,7 @@
                                     <div class="sp-kidzy-event spkgarten-col-sm-12">
                                        <h2>{{ orientation_program.title }}</h2>
 
+                                       {% if orientation_program.orientation_program_images.all.count > 1 %}
                                         <div class="owl-carousel owl-theme slider1">
                                           {% for img in orientation_program.orientation_program_images.all%}
                 <div class="product-content"> 
@@ -49,6 +50,13 @@
                 </div>
                 {% endfor %}
              </div>
+             {% else %}
+             {% for img in orientation_program.orientation_program_images.all%}
+             {% thumbnail img.image "1040x730" crop="center" as im %}
+                      <img src="{{ im.url }}" style="width: 100% !important;">
+                      {% endthumbnail %}
+             {% endfor %}
+             {% endif %}
                                        </div>
                                        <div class="event-description">
                                           <div class="details">

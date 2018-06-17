@@ -1,5 +1,5 @@
 {% extends "_layouts/base.html" %}
-
+{% load thumbnail %}
 {% block page_title %}SS MATRIC - News And Events{% endblock %}
 {% block page_class %}home-page{% endblock %}
 {% block content %}
@@ -37,7 +37,9 @@
                                           {% for img in news_and_event.news_and_event_images.all%}
                 <div class="product-content"> 
                   <div class="product-image">
-                      <img src="{{ img.image.url }}" style="width: 100% !important;">
+                      {% thumbnail img.image "1040x730" crop="center" as im %}
+                      <img src="{{ im.url }}">
+                      {% endthumbnail %}
                   </div>
                  <!--  <div class="product-top">
                     <h4 class="product-title">
@@ -49,7 +51,9 @@
              </div>
              {% else %}
              {% for img in news_and_event.news_and_event_images.all%}
-             <img src="{{ img.image.url }}" style="width: 100% !important;">
+             {% thumbnail img.image "1040x730" crop="center" as im %}
+                      <img src="{{ im.url }}" style="width: 100% !important;">
+                      {% endthumbnail %}
              {% endfor %}
              {% endif %}
                                        </div>

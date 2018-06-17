@@ -34,7 +34,6 @@
                                        <h2>{{ cocarricular.title }}</h2>
 
 
-
 {% if cocarricular.cocarricular_images.all.count > 1 %}
                                         <div class="owl-carousel owl-theme slider1">
                                           {% for img in cocarricular.cocarricular_images.all%}
@@ -48,9 +47,9 @@
                 {% endfor %}
              </div>
              {% else %}
-             {% for img in cocarricular.news_and_event_images.all%}
+             {% for img in cocarricular.cocarricular_images.all%}
              {% thumbnail img.image "1040x730" crop="center" as im %}
-                      <img src="{{ im.url }}">
+                      <img src="{{ im.url }}" style="width: 100% !important;">
                       {% endthumbnail %}
              {% endfor %}
              {% endif %}

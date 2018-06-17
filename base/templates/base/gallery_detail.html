@@ -41,17 +41,14 @@
                       <img src="{{ im.url }}">
                       {% endthumbnail %}
                   </div>
-                 <!--  <div class="product-top">
-                    <h4 class="product-title">
-                      <a href="#">Lorum Ipsum</a>
-                    </h4> 
-                  </div>  --> 
                 </div>
                 {% endfor %}
              </div>
              {% else %}
              {% for img in gallery.gallery_images.all%}
-             <img src="{{ img.image.url }}" style="width: 100% !important;">
+             {% thumbnail img.image "1040x730" crop="center" as im %}
+                      <img src="{{ im.url }}" style="width: 100% !important;">
+                      {% endthumbnail %}
              {% endfor %}
              {% endif %}
                                        </div>
