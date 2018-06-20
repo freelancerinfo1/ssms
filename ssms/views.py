@@ -2,11 +2,11 @@ from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-# from anabond.forms import ControlPlanForm
-# from anabond.models import ControlPlan, ControlPlanProperty, ControlPlanPropertyItem
+from django.contrib import messages
+from django.core.mail import send_mail
 from datetime import datetime
 from .models import Teachers,NewsAndEvents,NewsAndEventImages, Toppers, Sports, CoCarricular, ExtraCurricular, Facilitie, SmartClass, LifeAtSchool, OrientationProgram, Gallery, AdmissionCriterias, ClassRoutine, Award, History
-
+from .forms import ContactUsForm
 class CoursesView(TemplateView):
 	template_name = "base/courses.html"
 
@@ -36,7 +36,29 @@ class ContactUsView(TemplateView):
 	template_name = "base/contact_us.html"
 
 	def get(self,request):
-		return render(request, self.template_name,{})
+		form = ContactUsForm()
+		return render(request, self.template_name,{"form":form})
+
+	def post(self,request):
+		data = request.POST
+		form = ContactUsForm(data)
+		if form.is_valid():
+			contact_us = form.save(commit=False)
+			contact_us.save()
+			send_mail(
+			    data.get('subject'),
+			    data.get('messages'),
+			    data.get('email'),
+			    ['sakthivelr321@gmail.com'],
+			    fail_silently=False,
+			)
+			return redirect('contact_us')
+		else:
+			messages.warning(request,"Impossible de traiter votre requte !")
+			messages.add_message(request, messages.DEBUG, 'Champs requis')
+
+			return render(request, self.template_name, {'form':form})
+		raise Exception("test")
 
 
 class NewsAndEventsView(TemplateView):

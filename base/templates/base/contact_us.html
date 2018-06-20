@@ -1,12 +1,40 @@
 {% extends "_layouts/base.html" %}
+{% load addClass %}
 {% block page_title %}SS MATRIC - Contact Us{% endblock %}
 {% block page_class %}home-page{% endblock %}
 {% block content %}
+ <style type="text/css">
+        /* #sppb-addon-1525072333 .sppb-addon-gmap-canvas {height:550px;}
+         .sp-page-builder .page-content #section-id-1525072334{margin:0px;padding:120px 0;}
+         #sppb-addon-1525072336 .sppb-addon-title {
+         color:#f7941d;font-size:20px;line-height:20px;}
+         #sppb-addon-1525072338 .sppb-addon-title {
+         color:#0072bc;font-size:20px;line-height:20px;}
+         #sppb-addon-1525072340 .sppb-addon-title {
+         color:#8dc63f;font-size:20px;line-height:20px;}
+         #sppb-addon-1525072342 .sppb-addon-title {
+         color:#f26d7d;font-size:20px;line-height:20px;}
+         .sp-page-builder .page-content #section-id-1525072343{margin:0px;padding:0 0 120px 0;}
+         .sp-page-builder .page-content #section-id-1525072343 .sppb-section-title .sppb-title-heading {font-size:44px;line-height: 44px;margin-bottom:50px;}
+         body{font-family:Sniglet, sans-serif; font-size:16px; font-weight:normal; }
+         h1{font-family:Sniglet, sans-serif; font-size:100px; font-weight:normal; }
+         h2{font-family:Sniglet, sans-serif; font-size:44px; font-weight:normal; }
+         h3{font-family:Sniglet, sans-serif; font-size:28px; font-weight:normal; }
+         h4{font-family:Sniglet, sans-serif; font-size:20px; font-weight:normal; }
+         h5{font-family:Sniglet, sans-serif; font-size:18px; font-weight:normal; }
+         .sppb-slidehsow-sub-title{font-family:Flavors, sans-serif; font-weight:normal; }
+         #sp-top-bar{ color:#ffffff;padding:12px 0; }
+         #sp-bottom{ background-image:url("../../../images/demo/bottom-bg.png");background-attachment:fixed;padding:80px 0 305px 0; }
+*/
+         .alert-error{
+            color:red;
+         }
+      </style>
    <section id="sp-page-title">
          <div class="row">
             <div id="sp-title" class="col-sm-12 col-md-12">
                <div class="sp-column ">
-                  <div class="sp-page-title" style="background-image: url(../../../images/demo/subheader.png);">
+                  <div class="sp-page-title" style="background-image: url(/static/assets/images/demo/subheader.png);">
                      <div class="container">
                         <h2>Contact Us</h2>
                        
@@ -136,14 +164,27 @@
                                           <div id="sppb-addon-1525072345" class="clearfix">
                                              <div class="sppb-addon sppb-addon-ajax-contact ">
                                                 <div class="sppb-ajax-contact-content">
-                                                   <form class="sppb-ajaxt-contact-form">
+                                                   <form method="POST" action="">
+                                                      {% csrf_token %}
                                                       <div class="sppb-input-group">
-                                                         <div class="sppb-form-group"><input type="text" name="name" class="sppb-form-control" placeholder="Name" required="required"></div>
-                                                         <div class="sppb-form-group"><input type="email" name="email" class="sppb-form-control" placeholder="Email" required="required"></div>
-                                                         <div class="sppb-form-group"><input type="text" name="subject" class="sppb-form-control" placeholder="Subject" required="required"></div>
+                                                         <div class="sppb-form-group">{{ form.name | addcss:"form-control" }}
+{% if form.name.errors %}<span class="alert-error">{{ form.name.errors|striptags }}</span>
+                                                {% endif %}</div>
+                                                         <div class="sppb-form-group">{{ form.email | addcss:"form-control" }}
+{% if form.email.errors %}<span class="alert-error">{{ form.email.errors|striptags }}</span>
+                                                {% endif %}</div>
+                                                         <div class="sppb-form-group">{{ form.subject | addcss:"form-control" }}
+{% if form.subject.errors %}<span class="alert-error">{{ form.subject.errors|striptags }}</span>
+                                                {% endif %}</div>
                                                       </div>
-                                                      <div class="sppb-form-group sppb-textarea"><textarea name="message" rows="5" class="sppb-form-control" placeholder="Message" required="required"></textarea></div>
-                                                      <input type="hidden" name="recipient" value="ZW1haWxAeW91cmRvbWFpbi5jb20="><input type="hidden" name="from_email" value=""><input type="hidden" name="from_name" value=""><input type="hidden" name="captcha_type" value="default"><button type="submit" id="btn-1525072345" class="sppb-btn sppb-btn-primary"><i class="fa"></i> Send Message</button>
+                                                      <div class="sppb-form-group sppb-textarea">
+
+{{ form.message | addcss:"form-control" }}
+{% if form.message.errors %}<span class="alert-error">{{ form.message.errors|striptags }}</span>
+                                                {% endif %}
+
+                                                        </div>
+                                                     <button type="submit" id="btn-1525072345" class="sppb-btn sppb-btn-primary"><i class="fa"></i> Send Message</button>
                                                    </form>
                                                    <div style="display:none;margin-top:10px;" class="sppb-ajax-contact-status"></div>
                                                 </div>
