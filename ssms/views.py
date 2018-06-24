@@ -47,9 +47,9 @@ class ContactUsView(TemplateView):
 			contact_us.save()
 			send_mail(
 			    data.get('subject'),
-			    data.get('messages'),
+			    data.get('message'),
 			    data.get('email'),
-			    ['sakthivelr321@gmail.com'],
+			    ['ssmatricsingai@gmail.com'],
 			    fail_silently=False,
 			)
 			return redirect('contact_us')
