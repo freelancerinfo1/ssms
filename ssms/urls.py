@@ -40,7 +40,7 @@ urlpatterns = patterns('',
         url(r'^sports/$', SportsView.as_view(), name='sports'),
         url(r'^sports/(?P<form_id>\d+)/$', SportsDetailView.as_view(), name='sports_detail'),
 
-        url(r'^cocarricular/$', CoCarricularView.as_view(), name='cocarricular'),
+        url(r'^cocurricular/$', CoCarricularView.as_view(), name='cocarricular'),
         url(r'^cocarricular/(?P<form_id>\d+)/$', CoCarricularDetailView.as_view(), name='cocarricular_detail'),
         url(r'^extracurricular/$', ExtraCurricularView.as_view(), name='extracurricular'),
         url(r'^extracurricular/(?P<form_id>\d+)/$', ExtraCurricularDetailView.as_view(), name='extracurricular_detail'),
