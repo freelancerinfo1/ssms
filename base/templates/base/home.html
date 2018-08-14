@@ -274,7 +274,7 @@
                                                          <img src="{{ im.url }}">
                                                                       {% endthumbnail %}
                                                          <div class="sp-overlay">
-                                                            <a href="SSMS/Class Routines/2-lorem-ipsum-dolor-sit-amet-consectetur-adipisicing.html" class="icon"><i class="spkgarten-icon-link"></i></a>
+                                                            <a href="{% url 'news_and_event_detail' news_and_event.id %}" class="icon"><i class="spkgarten-icon-link"></i></a>
                                                          </div>
                                                          {% endif %}
                                                          {% endfor %}
